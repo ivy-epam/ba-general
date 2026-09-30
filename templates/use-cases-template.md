@@ -1,0 +1,69 @@
+---
+template: use-cases
+title: Use Case Specifications Template
+version: 1.0
+last_updated: 2026-09-28
+owner: ivy_li@epam.com
+used_by_skill: generate-use-cases
+---
+
+# {{Feature Name}} — Use Case Specifications
+
+## 1. Document Control & Revision History
+
+| Field | Value |
+|---|---|
+| Feature Name | {{feature name}} |
+| Related Feature Analysis | {{link/path to outputs/feature-<feature>/<feature>-feature-analysis.md, or "None"}} |
+| Author | {{author}} |
+| Status | Draft / In Review / Approved |
+
+**Revision History**
+
+| Version | Date | Change Description | Trigger / Reason |
+|---|---|---|---|
+| 1.0 | {{date}} | Initial draft | {{e.g., "Derived from To-Be process in Feature Analysis"}} |
+
+## 2. Use Case Summary
+
+| ID | Name | Primary Actor | Brief Description |
+|---|---|---|---|
+| UC-01 | {{...}} | {{...}} | {{one-line goal}} |
+| UC-02 | {{...}} | {{...}} | {{one-line goal}} |
+
+## 3. Use Case Details
+
+*One block per use case below. Repeat this block for each confirmed use case — do not omit fields; use "Not applicable" or move an unresolved item to Open Questions rather than leaving a field blank.*
+
+### UC-01: {{Use Case Name}}
+
+| Field | Value |
+|---|---|
+| Primary Actor | {{...}} |
+| Secondary Actor(s) | {{... or "None"}} |
+| Trigger | {{what initiates this use case}} |
+| Preconditions | {{what must be true before this use case can start}} |
+| Postconditions (Success Guarantee) | {{what must be true after successful completion}} |
+
+**Basic Flow**
+
+1. {{Actor action}} → {{System response}}
+2. {{Actor action}} → {{System response}}
+
+**Alternate Flow(s)**
+
+- **A1 (at step {{n}}):** {{condition}} → {{what happens instead}}
+
+**Exception Flow(s)**
+
+- **E1 (at step {{n}}):** {{error condition}} → {{system/actor response}}
+
+**Business Rules Referenced:** {{Rule name(s) from the linked Feature Analysis's To-Be: Business Rules table, or "None"}}
+
+**Related Use Cases:** {{"Includes UC-0X" / "Extends UC-0X" / "None"}}
+
+<!-- Repeat "### UC-0X: <Name>" block above for each additional confirmed use case -->
+
+## 4. Open Questions
+
+{{Unresolved items across all use cases, each tagged with its UC ID, including any conflicts found between sources and any business rules referenced but not yet documented in the Feature Analysis.}}
