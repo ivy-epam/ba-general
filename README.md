@@ -22,7 +22,7 @@ generate-test-cases
 generate-knowledge-page
 ```
 
-`generate-rbac` and `generate-smoke-test` run alongside the chain — cumulative, product-wide, updated as each feature is added or changes.
+`generate-rbac`, `generate-domain-model`, and `generate-smoke-test` run alongside the chain — cumulative, product-wide, updated as each feature is added or changes.
 
 
 ## Directory structure
@@ -33,6 +33,7 @@ Example after running the chain on project `ABC`, feature `checkout` (use cases 
 outputs/
 ├── ABC-PRD.md
 ├── rbac.md
+├── domain-model.md
 ├── smoke-tests.md
 ├── feature-checkout/
 │   ├── checkout-feature-analysis.md
@@ -67,5 +68,5 @@ Stories (and their func-test files) live under `future-sprint/`, `current-sprint
 | Project | `outputs/<project-code>-PRD.md` | `generate-prd` |
 | Feature | `outputs/feature-<feature>/...` | `generate-feature-analysis`, `generate-use-cases`, `generate-knowledge-page` |
 | Story | `outputs/<bucket>/US-<use-case>/...` | `generate-user-stories`, `verify-user-stories`, `generate-test-cases` |
-| Product-wide | `outputs/rbac.md`, `outputs/smoke-tests.md` | `generate-rbac`, `generate-smoke-test` |
+| Product-wide | `outputs/rbac.md`, `outputs/domain-model.md`, `outputs/smoke-tests.md` | `generate-rbac`, `generate-domain-model`, `generate-smoke-test` |
 
