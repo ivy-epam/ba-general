@@ -64,19 +64,3 @@ used_by_skill: generate-case-study
 *Secondary context: the BA's specific role, responsibilities, and contributions that enabled the solution and outcomes above. Not the main story, but how the BA fit into the team's success.*
 
 {{Title/role held, key responsibilities and techniques employed (e.g., stakeholder interviews, requirements modeling, backlog refinement, RBAC design, domain modeling), and how those contributed to the project's outcomes.}}
-
-## 9. Key Insights & Lessons Learned
-
-{{What the BA/team learned from this engagement that's transferable to future projects. What worked well? What would be done differently? Challenges overcome and how.}}
-
-## 10. Open Questions
-
-{{Unresolved items: metrics pending verification, confidentiality decisions not yet made for specific details, or anything else still unconfirmed. Nothing here should be guessed or finalized without resolution.}}
-
-## 11. Related Internal Artifacts (Internal Use Only — Remove Before External Sharing)
-
-*Links back to this project's other generated artifacts, for the contractor's own traceability. These reference internal project codes/paths with no meaning outside this repo and should be stripped before using this document in an external-facing portfolio.*
-
-- PRD: {{link}}
-- Feature Analysis / Knowledge Pages: {{link(s)}}
-- Other: {{...}}

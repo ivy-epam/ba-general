@@ -74,8 +74,6 @@ Ask, section by section (skip any the user says doesn't apply yet, and flag the 
 
 - **My Role & Key Contributions:** (secondary) the BA's title/role, specific responsibilities and techniques employed (stakeholder interviews, requirements modeling, RBAC design, domain modeling, backlog refinement, etc.), and how those contributed to enabling the solution/outcomes.
 
-- **Key Insights & Lessons Learned:** what the BA/team learned from this engagement. What worked well? What would be done differently? Challenges overcome.
-
 ### 2.4 — Draft the document
 
 Follow `templates/case-study-template.md` exactly. Populate:
@@ -86,10 +84,8 @@ Follow `templates/case-study-template.md` exactly. Populate:
   - Problem Statement: blend user's problem framing with LLM competitor analysis (market gaps, competitive positioning).
   - Solution Delivered (cite source artifacts for scope).
   - Outcomes & Measurable Impact (cite source for each metric).
-  - Engagement Context, My Role & Key Contributions (secondary), Key Insights & Lessons Learned.
+  - Engagement Context, My Role & Key Contributions (secondary).
   - Each claim attributed (source doc, user interview, "LLM market research," "competitor analysis," etc.).
-- Related Internal Artifacts — links to the `outputs/` files found in 2.1, explicitly marked internal-only.
-- Open Questions — anything unresolved, unconfirmed, or pending permission.
 
 ### 2.5 — Hard-stop confirmation gate
 
@@ -101,7 +97,7 @@ Create the `case-study/` folder if it doesn't exist (top-level, sibling of `outp
 
 ### 2.7 — Chat-only summary
 
-Summarize for the user: which `outputs/` sources were used (or that none existed), what was gathered via interview, the confidentiality decisions applied, and any Open Questions — not a restatement of the full document.
+Summarize for the user: which `outputs/` sources were used (or that none existed), what was gathered via interview, the market research and competitor insights added, and the confidentiality decisions applied — not a restatement of the full document.
 
 ## Step 3 — Update mode
 
@@ -123,11 +119,11 @@ Apply changes only to the affected sections, leaving the rest unchanged. Present
 
 ### 3.5 — Chat-only delta summary
 
-Summarize what sections were updated, what stayed the same, any newly-applied confidentiality decisions, and any new Open Questions.
+Summarize what sections were updated, what stayed the same, and any newly-applied confidentiality decisions.
 
 ## Shared discipline across all runs
 
-- **No fabrication:** every business/problem/solution/outcome fact traces to a source document (with citation) or direct interview answer; metrics are sourced (client-reported, team-tracked, etc.), not guessed.
-- **Confidentiality defaults to NOT shareable** until the user explicitly confirms otherwise; unresolved confidentiality calls go to Open Questions, never guessed.
+- **No fabrication:** every business/problem/solution/outcome fact traces to a source document (with citation) or direct interview answer; metrics are sourced (client-reported, team-tracked, etc.), not guessed. If something cannot be verified, ask the user to clarify rather than inferring.
+- **Confidentiality:** client name and industry/domain decisions are confirmed in Step 2.2 before drafting.
 - **Business facts come from source docs or interview:** solution/scope/features from artifacts, problem/outcomes/business context from the user's own understanding/client reports; never inferred.
 - **Chat-only summaries** — never restate the full document in chat after writing it.
