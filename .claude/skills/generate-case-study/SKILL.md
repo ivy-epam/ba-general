@@ -1,11 +1,13 @@
 ---
 name: generate-case-study
-description: Create or update a business case study documenting a problem solved, solution delivered, and measurable outcomes from the BA's perspective. One file per project, stored outside outputs/. Use when the user asks to write a case study, portfolio project writeup, or is offboarding/wrapping up a project.
+description: Create a business case study documenting a problem solved, solution delivered, and measurable outcomes from the BA's perspective. One file per project, stored outside outputs/, created once at offboarding. Use when the user asks to write a case study or portfolio project writeup before leaving a project.
 ---
 
 # Generate Case Study
 
-Produces or updates **a business case study** (`case-study/<project-code>-case-study.md`) — a narrative of a problem solved, solution delivered, and measurable outcomes achieved. Written from the BA's perspective, it showcases the business challenge, what was built, and the results, for the BA's professional portfolio and potential external sharing. Unlike every other skill in this project, this is **not a project deliverable**: it is not stored under `outputs/`, and it lives in a separate top-level `case-study/` folder because it's the BA's own portfolio record spanning the whole engagement, not an artifact handed to the project.
+Produces **a business case study** (`case-study/<project-code>-case-study.md`) — a narrative of a problem solved, solution delivered, and measurable outcomes achieved. Written from the BA's perspective, it showcases the business challenge, what was built, and the results, for the BA's professional portfolio and potential external sharing. Unlike every other skill in this project, this is **not a project deliverable**: it is not stored under `outputs/`, and it lives in a separate top-level `case-study/` folder because it's the BA's own portfolio record spanning the whole engagement, not an artifact handed to the project.
+
+**One-time creation:** case studies are created once at offboarding. Any further edits are done manually by the user.
 
 **One file per project**, prefixed with the project code so the folder can accumulate case studies from many past projects over time: `case-study/<project-code>-case-study.md`.
 
@@ -30,11 +32,9 @@ The template lives at `templates/case-study-template.md`. Always read that file 
 
 Ask the user which project this case study is for, if not already clear (e.g., they just said they're offboarding from a named engagement). Reuse the same project code as `outputs/<project-code>-PRD.md` if that file exists, so the case study lines up with the project's other artifacts. Confirm the code before proceeding — it fixes both the output filename and which `outputs/` artifacts to check in Step 1/2.1.
 
-## Step 1 — Determine mode: create or update
+## Step 1 — Check if case study already exists
 
-Check whether `case-study/<project-code>-case-study.md` already exists.
-- **Doesn't exist** → **Create**.
-- **Exists** → **Update**.
+Check whether `case-study/<project-code>-case-study.md` already exists. If it does, let the user know the file already exists; they can review it and edit manually if needed. Otherwise, proceed to create mode.
 
 ## Step 2 — Create mode
 
@@ -92,29 +92,9 @@ Create the `case-study/` folder if it doesn't exist (top-level, sibling of `outp
 
 Summarize for the user: what raw project info was read from `docs/<project-code>/`, what was gathered via interview, the market research and competitor insights added, and the confidentiality decisions applied. Invite the user to review and manually edit the file as needed.
 
-## Step 3 — Update mode
+## Shared discipline
 
-### 3.1 — Read existing file
-
-Read the current `case-study/<project-code>-case-study.md` in full; note its current version, Revision History, and existing Confidentiality & Sharing Notes.
-
-### 3.2 — Ask what's driving the update
-
-E.g., a role change, a new achievement surfaced after reflection, new stakeholder feedback received, a corrected metric, a newly-secured permission to name the client.
-
-### 3.3 — Re-confirm confidentiality if needed
-
-If the update includes new/changed client name or industry/domain details, confirm the confidentiality decisions still apply.
-
-### 3.4 — Apply changes and write back
-
-Apply changes only to the affected sections, leaving the rest unchanged. Update the Created date in Document Control if this is a significant refresh, or leave it as the original creation date if just adding details/clarifications. Write the updated file back to the same path.
-
-### 3.5 — Chat-only delta summary
-
-Summarize what sections were updated, what stayed the same, and any newly-applied confidentiality decisions. Invite the user to review and manually edit as needed.
-
-## Shared discipline across all runs
+The case study is created once at offboarding. Any further edits are done manually by the user.
 
 - **No fabrication:** every business/problem/solution/outcome fact traces to a source document (with citation) or direct interview answer; metrics are sourced (client-reported, team-tracked, etc.), not guessed. If something cannot be verified, ask the user to clarify rather than inferring.
 - **Confidentiality:** client name and industry/domain decisions are confirmed in Step 2.2 before drafting.
