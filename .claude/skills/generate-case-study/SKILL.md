@@ -84,17 +84,13 @@ Follow `templates/case-study-template.md` exactly. Populate:
   - Engagement Context, My Role & Key Contributions (secondary).
   - Each claim attributed (docs/<project-code>, user interview, "LLM market research," "competitor analysis," etc.).
 
-### 2.5 — Hard-stop confirmation gate
-
-Before writing the file, present the full draft (or a structured section-by-section summary) in chat and ask the user to confirm it's accurate and that they're comfortable with what's currently marked shareable. **Wait for explicit confirmation before writing anything** — this gate exists because the document may be used in an external-facing portfolio, so the stakes of a mistaken disclosure are higher than for an internal deliverable.
-
-### 2.6 — Write output
+### 2.5 — Write output
 
 Create the `case-study/` folder if it doesn't exist (top-level, sibling of `outputs/`, at the repo root). Write to `case-study/<project-code>-case-study.md`.
 
-### 2.7 — Chat-only summary
+### 2.6 — Chat-only summary
 
-Summarize for the user: which `outputs/` sources were used (or that none existed), what was gathered via interview, the market research and competitor insights added, and the confidentiality decisions applied — not a restatement of the full document.
+Summarize for the user: what raw project info was read from `docs/<project-code>/`, what was gathered via interview, the market research and competitor insights added, and the confidentiality decisions applied. Invite the user to review and manually edit the file as needed.
 
 ## Step 3 — Update mode
 
@@ -110,13 +106,13 @@ E.g., a role change, a new achievement surfaced after reflection, new stakeholde
 
 If the update includes new/changed client name or industry/domain details, confirm the confidentiality decisions still apply.
 
-### 3.4 — Apply changes, hard-stop confirm, write back
+### 3.4 — Apply changes and write back
 
-Apply changes only to the affected sections, leaving the rest unchanged. Present the delta and **wait for explicit confirmation** before writing (same external-facing-stakes rationale as 2.5). Update the Created date in Document Control if this is a significant refresh, or leave it as the original creation date if just adding details/clarifications. Write the updated file back to the same path.
+Apply changes only to the affected sections, leaving the rest unchanged. Update the Created date in Document Control if this is a significant refresh, or leave it as the original creation date if just adding details/clarifications. Write the updated file back to the same path.
 
 ### 3.5 — Chat-only delta summary
 
-Summarize what sections were updated, what stayed the same, and any newly-applied confidentiality decisions.
+Summarize what sections were updated, what stayed the same, and any newly-applied confidentiality decisions. Invite the user to review and manually edit as needed.
 
 ## Shared discipline across all runs
 
