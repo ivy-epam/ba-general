@@ -69,7 +69,7 @@ Ask, section by section (skip any the user says doesn't apply yet, and flag the 
 ### 2.4 — Draft the document
 
 Follow `templates/case-study-template.md` exactly. Populate:
-- Document Control (Confidentiality Level field, Status: Draft) + Revision History v1.0, first row "Initial draft."
+- Document Control (Project Code, Author, Created date, Confidentiality Level).
 - Confidentiality & Sharing Notes — the Step 2.2 decisions, verbatim.
 - All remaining sections from interview + source docs: Industry & Business Context, Problem Statement, Solution Delivered (cite source artifacts for scope), Outcomes & Measurable Impact (cite source for each metric), Engagement Context, My Role & Key Contributions (secondary), Key Insights & Lessons Learned. Each claim attributed (source doc + section, or "stated by user in interview," or "client-reported," etc.).
 - Related Internal Artifacts — links to the `outputs/` files found in 2.1, explicitly marked internal-only.
@@ -103,11 +103,11 @@ Any new quote, metric, or client-identifying detail introduced in this update ge
 
 ### 3.4 — Apply changes, hard-stop confirm, write back
 
-Apply changes only to the affected sections, leaving the rest unchanged. Present the delta and **wait for explicit confirmation** before writing (same external-facing-stakes rationale as 2.5). Bump the version (minor for additions/corrections, major for a significant reframing — use judgment, ask if unclear) and add a Revision History row describing what changed and why. Write the updated file back to the same path.
+Apply changes only to the affected sections, leaving the rest unchanged. Present the delta and **wait for explicit confirmation** before writing (same external-facing-stakes rationale as 2.5). Update the Created date in Document Control if this is a significant refresh, or leave it as the original creation date if just adding details/clarifications. Write the updated file back to the same path.
 
 ### 3.5 — Chat-only delta summary
 
-Summarize what changed, what stayed the same, any newly-applied confidentiality decisions, and any new Open Questions.
+Summarize what sections were updated, what stayed the same, any newly-applied confidentiality decisions, and any new Open Questions.
 
 ## Shared discipline across all runs
 

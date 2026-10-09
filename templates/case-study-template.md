@@ -11,20 +11,14 @@ used_by_skill: generate-case-study
 
 *A business case study showcasing a problem solved, solution delivered, and measurable outcomes — written from the BA's perspective. Focuses on business context, industry, challenge, solution, and results; the BA's role and approach are secondary context. This is not a project deliverable and is not shared with the client/project team; it is written for the BA's own professional portfolio.*
 
-## 1. Document Control & Revision History
+## 1. Document Control
 
 | Field | Value |
 |---|---|
 | Project Code | {{project-code}} |
 | Author | {{author}} |
-| Status | Draft / Final |
+| Created | {{date}} |
 | Confidentiality Level | {{e.g., "Client name shareable externally" / "Client anonymized — industry only" / "Fully anonymized — no identifying details"}} |
-
-**Revision History**
-
-| Version | Date | Change Description | Trigger / Reason |
-|---|---|---|---|
-| 1.0 | {{date}} | Initial draft | {{e.g., "Created on project offboarding"}} |
 
 ## 2. Confidentiality & Sharing Notes
 
