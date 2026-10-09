@@ -22,12 +22,10 @@ used_by_skill: generate-case-study
 
 ## 2. Confidentiality & Sharing Notes
 
-*Explicit decisions made with the user about what can be shared externally (e.g., in a portfolio, on LinkedIn, with a future client). Nothing elsewhere in this document should contradict what's recorded here. Default assumption until confirmed otherwise: NOT shareable.*
-
-- **Client / company name:** {{Real name OK to use / Anonymize as [description, e.g., 'a mid-size regional bank'] / Not yet decided — see Open Questions}}
-- **Industry / domain:** {{shareable even if client name is not, or also withheld}}
-- **Stakeholder feedback attribution:** {{Named with title, with permission / Anonymized as role only (e.g., 'the Product Owner') / Omitted — no permission secured}}
-- **Other exclusions:** {{any specific metrics, figures, or details the user explicitly wants left out regardless of general confidentiality posture}}
+| Field | Value |
+|---|---|
+| Client / Company Name | {{Real name OK to use / Anonymized as [description]}} |
+| Industry / Domain | {{Shareable / Withheld}} |
 
 ## 3. Industry & Business Context
 

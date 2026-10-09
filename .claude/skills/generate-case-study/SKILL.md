@@ -13,13 +13,11 @@ Produces or updates **a business case study** (`case-study/<project-code>-case-s
 1. **First**, read whatever generated project artifacts already exist under `outputs/` for this project code, to establish factual problem/solution/scope: `outputs/<project-code>-PRD.md`, any `outputs/feature-*/*-feature-analysis.md` and `outputs/feature-*/*-knowledge.md` files, and delivered stories under `outputs/delivered/`. These may not all exist (the project may predate this tool, or this skill may be run standalone) — that's fine, proceed with whatever is found.
 2. **Then**, interview the user directly for everything the documents can't fully capture: industry/business context, the underlying business problem, quantified outcomes and results (client-reported, team-tracked, or stakeholder-validated), the BA's role and contributions, and lessons learned. Source documents describe the solution and scope; the user provides the business problem/challenge framing, outcomes/impact, and what they learned.
 
-**Confidentiality discipline — explicit, never assumed.** This document may end up in an external-facing portfolio (shared with future clients or employers), so never assume what's safe to share. Early in the interview, explicitly ask the user:
-- Can the real client/company name be used, or should it be anonymized (e.g., "a Fortune 500 healthcare payer" instead of the real name)?
-- Can the industry/domain be named even if the client can't?
-- For any stakeholder feedback/testimonial: is it OK to attribute by name/title, should it be anonymized (e.g., "the Product Owner"), or should it be omitted entirely?
-- Are there any specific facts, metrics, or details to exclude regardless of general confidentiality (e.g., internal financials, unreleased roadmap items)?
+**Confidentiality discipline — explicit, never assumed.** Early in the interview, ask the user:
+- Can the real client/company name be used, or should it be anonymized (e.g., "a mid-size regional bank")?
+- Can the industry/domain be named, or should it be withheld?
 
-Record the answers in the document's **Confidentiality & Sharing Notes** section and apply them consistently through every later section — if the client name is to be anonymized, it must not leak into Project Context, Achievements, or Related Artifacts. **Default to NOT shareable** for anything the user hasn't explicitly cleared; log it under Open Questions instead of publishing it.
+Record the answers in the document's **Confidentiality & Sharing Notes** section and apply them consistently through every later section.
 
 **No-fabrication discipline (same as every other skill in this project):** every factual business claim (problem, solution, scope) must trace to a source document (cited by file and section) or a direct interview answer. Business outcomes/metrics are the user's claims (or client-reported facts) — capture them as stated, attributed to the source (e.g., "client-reported post-launch," "team analytics"), without embellishing or inflating them. Anything unresolved (a metric pending verification, a permission question) becomes an Open Questions entry, never a guess.
 
@@ -53,7 +51,7 @@ Extract only **factual project/feature grounding** from these sources (purpose/b
 
 ### 2.2 — Confidentiality interview (gate before drafting)
 
-Ask the explicit confidentiality questions listed above (client-name sharing, industry naming, feedback attribution, specific exclusions). At minimum, resolve the client-name and feedback-attribution questions before drafting Project Context, Achievements, or Stakeholder Feedback — item-specific confidentiality calls (e.g., a particular metric) can be resolved as they come up in Step 2.3.
+Ask the explicit confidentiality questions listed above (client-name and industry-domain sharing). Record the answers before proceeding to content interview.
 
 ### 2.3 — Interview for business narrative & outcomes
 
@@ -97,9 +95,9 @@ Read the current `case-study/<project-code>-case-study.md` in full; note its cur
 
 E.g., a role change, a new achievement surfaced after reflection, new stakeholder feedback received, a corrected metric, a newly-secured permission to name the client.
 
-### 3.3 — Re-confirm confidentiality for any new content
+### 3.3 — Re-confirm confidentiality if needed
 
-Any new quote, metric, or client-identifying detail introduced in this update gets the same confidentiality questions as Step 2.2 — prior answers do not automatically extend to new content.
+If the update includes new/changed client name or industry/domain details, confirm the confidentiality decisions still apply.
 
 ### 3.4 — Apply changes, hard-stop confirm, write back
 
