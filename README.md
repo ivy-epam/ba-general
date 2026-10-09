@@ -22,7 +22,7 @@ generate-test-cases
 generate-knowledge-page
 ```
 
-`generate-rbac` and `generate-smoke-test` run alongside the chain — cumulative, product-wide, updated as each feature is added or changes. `generate-domain-model` is project-scoped, created at project inception and refined as understanding deepens.
+`generate-rbac` and `generate-smoke-test` run alongside the chain — cumulative, product-wide, updated as each feature is added or changes. `generate-domain-model` is project-scoped, created at project inception and refined as understanding deepens. `generate-case-study` is standalone and personal — it produces the contractor's own portfolio record for a project, stored outside `outputs/` entirely, and is typically run once when offboarding from that project.
 
 
 ## Directory structure
@@ -50,6 +50,9 @@ outputs/
     └── US-apply-discount/
         ├── apply-discount-US-01.md
         └── apply-discount-func-test-01.md
+
+case-study/
+└── ABC-case-study.md
 ```
 
 ## Sprint buckets
@@ -69,4 +72,7 @@ Stories (and their func-test files) live under `future-sprint/`, `current-sprint
 | Feature | `outputs/feature-<feature>/...` | `generate-feature-analysis`, `generate-use-cases`, `generate-knowledge-page` |
 | Story | `outputs/<bucket>/US-<use-case>/...` | `generate-user-stories`, `verify-user-stories`, `generate-test-cases` |
 | Product-wide | `outputs/rbac.md`, `outputs/smoke-tests.md` | `generate-rbac`, `generate-smoke-test` |
+| Portfolio (personal, outside `outputs/`) | `case-study/<project-code>-case-study.md` | `generate-case-study` |
+
+`case-study/` is a sibling of `outputs/` at the repo root, not nested inside it — it's the contractor's own portfolio record, not a project deliverable.
 
