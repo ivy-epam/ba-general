@@ -5,14 +5,15 @@ description: Create or update a business case study documenting a problem solved
 
 # Generate Case Study
 
-Produces or updates **a business case study** (`case-study/<project-code>-case-study.md`) — a narrative of a problem solved, solution delivered, and measurable outcomes achieved. Written from the BA's perspective, it showcases the business challenge, what was built, and the results, for the contractor's professional portfolio and potential external sharing. Unlike every other skill in this project, this is **not a project deliverable**: it is not stored under `outputs/`, and the rest of the project team never sees it. It lives in a separate top-level `case-study/` folder because it's the contractor's own portfolio record spanning the whole engagement, not an artifact handed to the project.
+Produces or updates **a business case study** (`case-study/<project-code>-case-study.md`) — a narrative of a problem solved, solution delivered, and measurable outcomes achieved. Written from the BA's perspective, it showcases the business challenge, what was built, and the results, for the BA's professional portfolio and potential external sharing. Unlike every other skill in this project, this is **not a project deliverable**: it is not stored under `outputs/`, and it lives in a separate top-level `case-study/` folder because it's the BA's own portfolio record spanning the whole engagement, not an artifact handed to the project.
 
 **One file per project**, prefixed with the project code so the folder can accumulate case studies from many past projects over time: `case-study/<project-code>-case-study.md`.
 
 **Content sourcing — multiple sources:**
-1. **Project artifacts** (`outputs/`): read the project's PRD, feature analyses, and knowledge pages to extract factual solution/scope grounding.
-2. **User interview:** gather industry/business context, business problem framing, outcomes/impact, the BA's role and contributions, and lessons learned.
-3. **LLM research:** supplement Industry & Business Context with market research (trends, market landscape, regulatory context) and supplement Problem Statement with competitor analysis (competitive positioning, market gaps, benchmarks) to enrich and contextualize the user's narrative.
+1. **Raw project information** (`docs/<project-code>/`): read raw project/product information, market research, and product details stored in the project's documentation folder.
+2. **Project artifacts** (`outputs/`): read the project's PRD, feature analyses, and knowledge pages (if available) to extract factual solution/scope grounding.
+3. **User interview:** gather industry/business context, business problem framing, outcomes/impact, the BA's role and contributions, and lessons learned.
+4. **LLM research:** supplement Industry & Business Context with market research (trends, market landscape, regulatory context) and supplement Problem Statement with competitor analysis (competitive positioning, market gaps, benchmarks) to enrich and contextualize the user's narrative.
 
 **Confidentiality discipline — explicit, never assumed.** Early in the interview, ask the user:
 - Can the real client/company name be used, or should it be anonymized (e.g., "a mid-size regional bank")?
@@ -38,17 +39,18 @@ Check whether `case-study/<project-code>-case-study.md` already exists.
 
 ## Step 2 — Create mode
 
-### 2.1 — Read existing project artifacts, if any
+### 2.1 — Read existing project information and artifacts, if any
 
 Check for, and read where present:
+- Raw project/product information under `docs/<project-code>/` (market research, product overviews, competitive landscape, etc.)
 - `outputs/<project-code>-PRD.md`
 - `outputs/feature-*/*-feature-analysis.md`
 - `outputs/feature-*/*-knowledge.md`
-- Delivered stories under `outputs/delivered/**` belonging to this project (cross-reference via the feature names found in the PRD's Key Features/Capabilities; if ambiguous which features belong to this project code, ask the user)
+- Delivered stories under `outputs/delivered/**` belonging to this project (if ambiguous which features belong to this project code, ask the user)
 
-If none exist, tell the user plainly and proceed entirely via interview — this is not a blocker.
+If none exist, tell the user plainly and proceed via interview + LLM research — this is not a blocker.
 
-Extract only **factual project/feature grounding** from these sources (purpose/background, target users, key features, what was delivered and when) for Section 4 (Project Scope & Key Deliverables). Never pull personal-role, challenge, or achievement content from these docs — they describe the product, not the contractor's personal contribution.
+Extract **factual project/feature/market grounding** from these sources (purpose/background, target users, key features, what was delivered, market context, competitive landscape) for the business context and problem statement sections. Never pull personal-role, challenge, or achievement content from these docs — they describe the product/market, not the contractor's personal contribution.
 
 ### 2.2 — Confidentiality interview (gate before drafting)
 
@@ -80,12 +82,12 @@ Follow `templates/case-study-template.md` exactly. Populate:
 - Document Control (Project Code, Author, Created date, Confidentiality Level).
 - Confidentiality & Sharing Notes — the Step 2.2 decisions, verbatim.
 - All remaining sections from interview + source docs + LLM research: 
-  - Industry & Business Context: blend user's description with LLM market research (trends, market context, positioning).
-  - Problem Statement: blend user's problem framing with LLM competitor analysis (market gaps, competitive positioning).
-  - Solution Delivered (cite source artifacts for scope).
+  - Industry & Business Context: blend user's description with raw project info from `docs/<project-code>/` and LLM market research (trends, market context, positioning).
+  - Problem Statement: blend user's problem framing with raw project info and LLM competitor analysis (market gaps, competitive positioning).
+  - Solution Delivered (cite source artifacts and project info for scope).
   - Outcomes & Measurable Impact (cite source for each metric).
   - Engagement Context, My Role & Key Contributions (secondary).
-  - Each claim attributed (source doc, user interview, "LLM market research," "competitor analysis," etc.).
+  - Each claim attributed (docs/<project-code>, outputs/ artifact, user interview, "LLM market research," "competitor analysis," etc.).
 
 ### 2.5 — Hard-stop confirmation gate
 
