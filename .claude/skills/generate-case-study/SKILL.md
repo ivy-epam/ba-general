@@ -9,9 +9,10 @@ Produces or updates **a business case study** (`case-study/<project-code>-case-s
 
 **One file per project**, prefixed with the project code so the folder can accumulate case studies from many past projects over time: `case-study/<project-code>-case-study.md`.
 
-**Content sourcing — both, in sequence:**
-1. **First**, read whatever generated project artifacts already exist under `outputs/` for this project code, to establish factual problem/solution/scope: `outputs/<project-code>-PRD.md`, any `outputs/feature-*/*-feature-analysis.md` and `outputs/feature-*/*-knowledge.md` files, and delivered stories under `outputs/delivered/`. These may not all exist (the project may predate this tool, or this skill may be run standalone) — that's fine, proceed with whatever is found.
-2. **Then**, interview the user directly for everything the documents can't fully capture: industry/business context, the underlying business problem, quantified outcomes and results (client-reported, team-tracked, or stakeholder-validated), the BA's role and contributions, and lessons learned. Source documents describe the solution and scope; the user provides the business problem/challenge framing, outcomes/impact, and what they learned.
+**Content sourcing — multiple sources:**
+1. **Project artifacts** (`outputs/`): read the project's PRD, feature analyses, and knowledge pages to extract factual solution/scope grounding.
+2. **User interview:** gather industry/business context, business problem framing, outcomes/impact, the BA's role and contributions, and lessons learned.
+3. **LLM research:** supplement Industry & Business Context with market research (trends, market landscape, regulatory context) and supplement Problem Statement with competitor analysis (competitive positioning, market gaps, benchmarks) to enrich and contextualize the user's narrative.
 
 **Confidentiality discipline — explicit, never assumed.** Early in the interview, ask the user:
 - Can the real client/company name be used, or should it be anonymized (e.g., "a mid-size regional bank")?
@@ -53,15 +54,26 @@ Extract only **factual project/feature grounding** from these sources (purpose/b
 
 Ask the explicit confidentiality questions listed above (client-name and industry-domain sharing). Record the answers before proceeding to content interview.
 
-### 2.3 — Interview for business narrative & outcomes
+### 2.3 — Interview for business narrative & outcomes, supplemented with LLM research
 
 Ask, section by section (skip any the user says doesn't apply yet, and flag the skip under Open Questions rather than leaving it silently blank):
-- **Industry & Business Context:** client's industry, business model, market position, competitive/regulatory context (respecting the confidentiality decision from Step 2.2).
-- **Problem Statement / Business Challenge:** the specific business problem the project was created to solve. What was broken, inefficient, missing? Quantify if possible (cost, time, lost revenue, bottleneck impact).
+
+- **Industry & Business Context:** 
+  - Interview: client's industry, business model, market position, competitive/regulatory context (respecting confidentiality from Step 2.2).
+  - Supplement: perform LLM-driven market research on the client's industry/company (trends, market size, key players, regulatory landscape, growth drivers) to enrich and contextualize the user's description.
+
+- **Problem Statement / Business Challenge:**
+  - Interview: the specific business problem the project was created to solve. What was broken, inefficient, missing? Quantify if possible (cost, time, lost revenue, bottleneck impact).
+  - Supplement: perform LLM-driven competitor analysis (competitors' offerings, market gaps, positioning opportunities, industry benchmarks) to frame the user's problem statement in competitive context and inspire alternative framings if helpful.
+
 - **Solution Delivered:** what was built/changed to address the problem. Features, capabilities, scope — draw from existing artifacts where available.
+
 - **Outcomes & Measurable Impact:** project-level results and quantified business outcomes (adoption numbers, revenue impact, efficiency gains, cost savings, customer satisfaction, time-to-market, etc.). For each metric, ask for its source: client-reported, team-tracked, stakeholder feedback, industry benchmark, etc.
+
 - **Engagement Context:** start/end dates or duration, team size and composition, methodology (Agile/Scrum, Waterfall, hybrid).
+
 - **My Role & Key Contributions:** (secondary) the BA's title/role, specific responsibilities and techniques employed (stakeholder interviews, requirements modeling, RBAC design, domain modeling, backlog refinement, etc.), and how those contributed to enabling the solution/outcomes.
+
 - **Key Insights & Lessons Learned:** what the BA/team learned from this engagement. What worked well? What would be done differently? Challenges overcome.
 
 ### 2.4 — Draft the document
@@ -69,7 +81,13 @@ Ask, section by section (skip any the user says doesn't apply yet, and flag the 
 Follow `templates/case-study-template.md` exactly. Populate:
 - Document Control (Project Code, Author, Created date, Confidentiality Level).
 - Confidentiality & Sharing Notes — the Step 2.2 decisions, verbatim.
-- All remaining sections from interview + source docs: Industry & Business Context, Problem Statement, Solution Delivered (cite source artifacts for scope), Outcomes & Measurable Impact (cite source for each metric), Engagement Context, My Role & Key Contributions (secondary), Key Insights & Lessons Learned. Each claim attributed (source doc + section, or "stated by user in interview," or "client-reported," etc.).
+- All remaining sections from interview + source docs + LLM research: 
+  - Industry & Business Context: blend user's description with LLM market research (trends, market context, positioning).
+  - Problem Statement: blend user's problem framing with LLM competitor analysis (market gaps, competitive positioning).
+  - Solution Delivered (cite source artifacts for scope).
+  - Outcomes & Measurable Impact (cite source for each metric).
+  - Engagement Context, My Role & Key Contributions (secondary), Key Insights & Lessons Learned.
+  - Each claim attributed (source doc, user interview, "LLM market research," "competitor analysis," etc.).
 - Related Internal Artifacts — links to the `outputs/` files found in 2.1, explicitly marked internal-only.
 - Open Questions — anything unresolved, unconfirmed, or pending permission.
 
