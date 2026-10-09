@@ -1,6 +1,6 @@
 ---
 name: generate-case-study
-description: Create or update a business case study documenting a problem solved, solution delivered, and measurable outcomes — written from the BA's perspective for their professional portfolio/external sharing. Showcases industry context, business challenge, delivered solution, and quantified results; the BA's role is secondary context. One file per project, stored outside outputs/. Use when the user asks to write a case study, portfolio project writeup, or is offboarding/wrapping up and wants to document the project's problem, solution, and outcomes.
+description: Create or update a business case study documenting a problem solved, solution delivered, and measurable outcomes from the BA's perspective. One file per project, stored outside outputs/. Use when the user asks to write a case study, portfolio project writeup, or is offboarding/wrapping up a project.
 ---
 
 # Generate Case Study
