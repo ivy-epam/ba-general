@@ -1,17 +1,17 @@
 ---
 name: generate-case-study
-description: Create or update a personal case study document capturing the BA contractor's own project experience, role, challenges, achievements, and lessons learned for their portfolio/professional record — not a project deliverable. One file per project, stored outside outputs/. Use when the user asks to write/create a case study or portfolio write-up, or is offboarding/wrapping up from a project and wants to document their experience and achievements.
+description: Create or update a business case study documenting a problem solved, solution delivered, and measurable outcomes — written from the BA's perspective for their professional portfolio/external sharing. Showcases industry context, business challenge, delivered solution, and quantified results; the BA's role is secondary context. One file per project, stored outside outputs/. Use when the user asks to write a case study, portfolio project writeup, or is offboarding/wrapping up and wants to document the project's problem, solution, and outcomes.
 ---
 
 # Generate Case Study
 
-Produces or updates **a personal case study** (`case-study/<project-code>-case-study.md`) — a write-up of the BA contractor's own project experience, achievements, and lessons learned, for their personal portfolio and professional record. Unlike every other skill in this project, this is **not a project deliverable**: it is not stored under `outputs/`, and the rest of the project team never sees it. It lives in a separate top-level `case-study/` folder because it's the contractor's own record spanning the whole engagement, not an artifact handed to the project.
+Produces or updates **a business case study** (`case-study/<project-code>-case-study.md`) — a narrative of a problem solved, solution delivered, and measurable outcomes achieved. Written from the BA's perspective, it showcases the business challenge, what was built, and the results, for the contractor's professional portfolio and potential external sharing. Unlike every other skill in this project, this is **not a project deliverable**: it is not stored under `outputs/`, and the rest of the project team never sees it. It lives in a separate top-level `case-study/` folder because it's the contractor's own portfolio record spanning the whole engagement, not an artifact handed to the project.
 
 **One file per project**, prefixed with the project code so the folder can accumulate case studies from many past projects over time: `case-study/<project-code>-case-study.md`.
 
 **Content sourcing — both, in sequence:**
-1. **First**, read whatever generated project artifacts already exist under `outputs/` for this project code, to establish factual project scope, features, and delivered work: `outputs/<project-code>-PRD.md`, any `outputs/feature-*/*-feature-analysis.md` and `outputs/feature-*/*-knowledge.md` files, and delivered stories under `outputs/delivered/`. These may not all exist (the project may predate this tool, or this skill may be run standalone) — that's fine, proceed with whatever is found.
-2. **Then**, interview the user directly for everything those documents can't capture: their personal role/responsibilities, challenges they personally overcame, measurable impact/metrics, stakeholder feedback, skills/techniques demonstrated, lessons learned, engagement duration, and team size/context. Source documents are written in third-person, product-level language — never attribute personal-contribution content (role, challenges, achievements, feedback) to a source document; that content only ever comes from the user.
+1. **First**, read whatever generated project artifacts already exist under `outputs/` for this project code, to establish factual problem/solution/scope: `outputs/<project-code>-PRD.md`, any `outputs/feature-*/*-feature-analysis.md` and `outputs/feature-*/*-knowledge.md` files, and delivered stories under `outputs/delivered/`. These may not all exist (the project may predate this tool, or this skill may be run standalone) — that's fine, proceed with whatever is found.
+2. **Then**, interview the user directly for everything the documents can't fully capture: industry/business context, the underlying business problem, quantified outcomes and results (client-reported, team-tracked, or stakeholder-validated), the BA's role and contributions, and lessons learned. Source documents describe the solution and scope; the user provides the business problem/challenge framing, outcomes/impact, and what they learned.
 
 **Confidentiality discipline — explicit, never assumed.** This document may end up in an external-facing portfolio (shared with future clients or employers), so never assume what's safe to share. Early in the interview, explicitly ask the user:
 - Can the real client/company name be used, or should it be anonymized (e.g., "a Fortune 500 healthcare payer" instead of the real name)?
@@ -21,7 +21,7 @@ Produces or updates **a personal case study** (`case-study/<project-code>-case-s
 
 Record the answers in the document's **Confidentiality & Sharing Notes** section and apply them consistently through every later section — if the client name is to be anonymized, it must not leak into Project Context, Achievements, or Related Artifacts. **Default to NOT shareable** for anything the user hasn't explicitly cleared; log it under Open Questions instead of publishing it.
 
-**No-fabrication discipline (same as every other skill in this project):** every factual project claim must trace to a source document (cited by file and section) or a direct interview answer. Personal achievements/metrics/feedback are the user's own claims — capture them as stated, attributed to the user, without embellishing or inflating them. Anything unresolved (a metric pending verification, a testimonial pending permission) becomes an Open Questions entry, never a guess.
+**No-fabrication discipline (same as every other skill in this project):** every factual business claim (problem, solution, scope) must trace to a source document (cited by file and section) or a direct interview answer. Business outcomes/metrics are the user's claims (or client-reported facts) — capture them as stated, attributed to the source (e.g., "client-reported post-launch," "team analytics"), without embellishing or inflating them. Anything unresolved (a metric pending verification, a permission question) becomes an Open Questions entry, never a guess.
 
 The template lives at `templates/case-study-template.md`. Always read that file first to get the current section structure — do not hardcode the structure from memory, in case the template has been edited.
 
@@ -55,24 +55,23 @@ Extract only **factual project/feature grounding** from these sources (purpose/b
 
 Ask the explicit confidentiality questions listed above (client-name sharing, industry naming, feedback attribution, specific exclusions). At minimum, resolve the client-name and feedback-attribution questions before drafting Project Context, Achievements, or Stakeholder Feedback — item-specific confidentiality calls (e.g., a particular metric) can be resolved as they come up in Step 2.3.
 
-### 2.3 — Interview for personal content
+### 2.3 — Interview for business narrative & outcomes
 
 Ask, section by section (skip any the user says doesn't apply yet, and flag the skip under Open Questions rather than leaving it silently blank):
-- **Project Context:** client/industry (respecting the confidentiality decision), the business problem/objective in the user's own words.
-- **Engagement Duration & Team:** start/end dates or duration, team size and composition, methodology.
-- **My Role & Responsibilities:** title/role held, day-to-day responsibilities.
-- **Key Challenges & How They Were Solved:** hardest problems personally worked through, and how they were solved.
-- **Achievements & Measurable Impact:** measurable outcomes (time saved, defects reduced, adoption numbers, cost/revenue impact, stakeholder satisfaction) — ask for a number and its source (e.g., "client-reported," "my own tracking," "team retro") rather than accepting a vague claim.
-- **Skills & Techniques Demonstrated:** BA techniques, tools, soft skills used or grown.
-- **Stakeholder Feedback:** direct quotes/praise/testimonials received, with attribution confirmed per the Step 2.2 decision.
-- **Lessons Learned:** what the user would do differently, what they learned.
+- **Industry & Business Context:** client's industry, business model, market position, competitive/regulatory context (respecting the confidentiality decision from Step 2.2).
+- **Problem Statement / Business Challenge:** the specific business problem the project was created to solve. What was broken, inefficient, missing? Quantify if possible (cost, time, lost revenue, bottleneck impact).
+- **Solution Delivered:** what was built/changed to address the problem. Features, capabilities, scope — draw from existing artifacts where available.
+- **Outcomes & Measurable Impact:** project-level results and quantified business outcomes (adoption numbers, revenue impact, efficiency gains, cost savings, customer satisfaction, time-to-market, etc.). For each metric, ask for its source: client-reported, team-tracked, stakeholder feedback, industry benchmark, etc.
+- **Engagement Context:** start/end dates or duration, team size and composition, methodology (Agile/Scrum, Waterfall, hybrid).
+- **My Role & Key Contributions:** (secondary) the BA's title/role, specific responsibilities and techniques employed (stakeholder interviews, requirements modeling, RBAC design, domain modeling, backlog refinement, etc.), and how those contributed to enabling the solution/outcomes.
+- **Key Insights & Lessons Learned:** what the BA/team learned from this engagement. What worked well? What would be done differently? Challenges overcome.
 
 ### 2.4 — Draft the document
 
 Follow `templates/case-study-template.md` exactly. Populate:
 - Document Control (Confidentiality Level field, Status: Draft) + Revision History v1.0, first row "Initial draft."
 - Confidentiality & Sharing Notes — the Step 2.2 decisions, verbatim.
-- All remaining sections from interview + source docs, each claim attributed (source doc + section, or "stated by user in interview").
+- All remaining sections from interview + source docs: Industry & Business Context, Problem Statement, Solution Delivered (cite source artifacts for scope), Outcomes & Measurable Impact (cite source for each metric), Engagement Context, My Role & Key Contributions (secondary), Key Insights & Lessons Learned. Each claim attributed (source doc + section, or "stated by user in interview," or "client-reported," etc.).
 - Related Internal Artifacts — links to the `outputs/` files found in 2.1, explicitly marked internal-only.
 - Open Questions — anything unresolved, unconfirmed, or pending permission.
 
@@ -112,7 +111,7 @@ Summarize what changed, what stayed the same, any newly-applied confidentiality 
 
 ## Shared discipline across all runs
 
-- **No fabrication:** every project fact traces to a source document or a direct interview answer; every personal claim is attributed to the user as stated.
+- **No fabrication:** every business/problem/solution/outcome fact traces to a source document (with citation) or direct interview answer; metrics are sourced (client-reported, team-tracked, etc.), not guessed.
 - **Confidentiality defaults to NOT shareable** until the user explicitly confirms otherwise; unresolved confidentiality calls go to Open Questions, never guessed.
-- **Personal content never comes from source docs** — only from the user, even when a source doc happens to mention something adjacent.
+- **Business facts come from source docs or interview:** solution/scope/features from artifacts, problem/outcomes/business context from the user's own understanding/client reports; never inferred.
 - **Chat-only summaries** — never restate the full document in chat after writing it.
