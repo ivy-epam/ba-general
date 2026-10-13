@@ -40,13 +40,17 @@ used_by_skill: generate-case-study
 |---|---|
 | {{...}} | {{...}} |
 
-## 6. My Role & Key Contributions
+## 6. My Role & Responsibilities
 
-{{Title/role held, key responsibilities and techniques employed (e.g., stakeholder interviews, requirements modeling, backlog refinement, RBAC design, domain modeling), and how those contributed to the project's outcomes.}}
+**Title:** {{Title/role held}}
 
-## 7. Outcomes & Measurable Impact
+{{1-2 sentences on where the role sat in the team/program and its scope — what it owned and what it did not.}}
 
-| Metric | Value |
+- **{{Responsibility area}}** — {{what this area covered day to day, and the techniques employed (e.g., stakeholder interviews, requirements modeling, backlog refinement, RBAC design, domain modeling)}}
+
+## 7. Key Achievements & Contributions
+
+| Dimension | Achievement |
 |---|---|
-| {{...}} | {{...}} |
+| {{Area the achievement falls under, e.g., Delivery, Stakeholder Engagement, Quality, Process Improvement}} | {{One statement of what I accomplished: the action I took and the result it produced, quantified where possible}} |
 

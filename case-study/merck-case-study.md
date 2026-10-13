@@ -2,7 +2,7 @@
 template: case-study
 title: Project Case Study Template
 version: 1.0
-last_updated: 2026-10-09
+last_updated: 2026-10-13
 owner: ivy_li@epam.com
 used_by_skill: generate-case-study
 ---
@@ -40,6 +40,8 @@ Clinical Data Managers (CDMs) reviewed trial data through a fully manual, fragme
 
 ## 5. Solution Delivered
 
+*Scope note: as the offshore Business Analyst, I owned requirement engineering for the capabilities below — eliciting, specifying, and managing their requirements — and managed hypercare after go-live, while the platform itself was built by the engineering teams.*
+
 | Feature / Capability | Description |
 |---|---|
 | Automated data requesting & readiness checks | Automated the process of requesting outsourced data and checking its readiness, replacing manual requests. |
@@ -50,24 +52,26 @@ Clinical Data Managers (CDMs) reviewed trial data through a fully manual, fragme
 | Performance monitoring | Tracked system usage and efficiency to support ongoing optimization. |
 | Cloud-native ETL pipeline | Built on AWS services (Glue, S3, DynamoDB, ELB, Lambda, Step Functions), integrating clinical data comparison logic within a robust ETL pipeline. |
 
-## 6. My Role & Key Contributions
+## 6. My Role & Responsibilities
 
-**Title:** Business Analyst.
+**Title:** Offshore Business Analyst
 
-As BA on this GxP-regulated clinical data program, I:
+I was the offshore BA on this GxP-regulated clinical data program, owning requirement engineering from elicitation through approval and change control, and managing hypercare after go-live. I worked with clinical operations, data management, and regulatory affairs stakeholders, and with business and IT teams across Eastern Europe, the USA, China, and India.
 
-- **Led requirements elicitation** — engaged clinical operations, data management, and regulatory affairs stakeholders, translating clinical data and blinding/unblinding workflows into functional specifications and user stories aligned with FDA 21 CFR Part 11, ICH E6 GCP, and ALCOA+ principles.
-- **Mapped as-is and to-be processes** — for clinical data and blinding management, identifying compliance gaps and defining audit trail, access control, and data integrity requirements.
-- **Managed requirements approval and change control** — under GxP procedures, and supported the Product Owner in prioritizing the backlog across compliance obligations, system dependencies, and business value.
-- **Standardized BA practices and documentation for GxP delivery** — producing validation-ready artefacts (URS, FRS, traceability matrices) to support system qualification (IQ/OQ/PQ).
-- **Aligned global stakeholders** — business and IT stakeholders across Eastern Europe, the USA, China, and India on regulatory requirements and validation expectations.
+- **Requirements elicitation and specification** — eliciting requirements from clinical operations, data management, and regulatory affairs, and translating clinical data and blinding/unblinding workflows into functional specifications and user stories aligned with FDA 21 CFR Part 11, ICH E6 GCP, and ALCOA+ principles.
+- **Process and compliance gap analysis** — mapping as-is and to-be processes for clinical data and blinding management, identifying compliance gaps, and defining audit trail, access control, and data integrity requirements.
+- **GxP documentation** — standardizing BA practices and producing validation-ready artefacts (URS, FRS, traceability matrices) for system qualification (IQ/OQ/PQ).
+- **Requirements approval and change control** — managing requirement approval and change control under GxP procedures, and supporting the Product Owner in prioritizing the backlog across compliance obligations, system dependencies, and business value.
+- **Global stakeholder alignment** — aligning business and IT stakeholders across Eastern Europe, the USA, China, and India on regulatory requirements and validation expectations.
+- **Hypercare management** — managing the hypercare period after go-live.
 
-## 7. Outcomes & Measurable Impact
+## 7. Key Achievements & Contributions
 
-| Metric | Value |
+| Dimension | Achievement |
 |---|---|
-| Review time reduced | Data review time was reduced from approximately 4 hours to under 15 minutes per study trial. |
-| Improved data quality | Automation minimized manual work, resulting in fewer errors and enhanced data integrity. |
-| Timely data access | Automated scheduling ensured data was available when needed. |
-| Streamlined collaboration | The system enabled smoother data delivery and coordination across roles and teams. |
-| Validation-ready delivery | Standardized GxP documentation and traceability matrices supported system qualification (IQ/OQ/PQ) and audit readiness. |
+| Efficiency | Specified the requirements for automated data requesting, report scheduling, consolidation, and delta comparison, contributing to a cut in data review time from approximately 4 hours to under 15 minutes per study trial. |
+| Data Quality | Defined the audit trail, access control, and data integrity requirements that, together with the removal of manual steps, contributed to fewer errors and stronger data integrity. |
+| Data Availability | Specified the automated scheduling and job status notification requirements that made data available when needed. |
+| Compliance | Produced standardized, validation-ready GxP documentation (URS, FRS, traceability matrices) that supported system qualification (IQ/OQ/PQ) and audit readiness. |
+| Stakeholder Alignment | Aligned business and IT stakeholders across Eastern Europe, the USA, China, and India on regulatory requirements and validation expectations, contributing to smoother data delivery and coordination across roles and teams. |
+

@@ -22,7 +22,7 @@ Produces **a business case study** (`case-study/<client-code>[-<project-code>]-c
 
 Record the answers in the document's **Confidentiality & Sharing Notes** section and apply them consistently through every later section.
 
-**No-fabrication discipline (same as every other skill in this project):** every factual business claim (problem, solution, scope) must trace to a source document or a direct interview answer — but that traceability is an internal discipline, not something printed inline in the document. **Never write literal file-path citations (e.g., `` `docs/<project-code>/role_desc.md` ``) or source links in the body prose of any section** — this is a polished portfolio narrative, not a cited deliverable. The one place sourcing is written out is the "Source / Evidence" column in Section 6 (Outcomes & Measurable Impact), and there it's a plain descriptive label (e.g., "documented role achievement," "user interview," "client-reported post-launch," "team analytics"), never a file path or link. Business outcomes/metrics are the user's claims (or client-reported facts) — capture them as stated, without embellishing or inflating them. Anything unresolved (a metric pending verification, a permission question) becomes an Open Questions entry, never a guess.
+**No-fabrication discipline (same as every other skill in this project):** every factual business claim (problem, solution, scope) must trace to a source document or a direct interview answer — but that traceability is an internal discipline, not something printed inline in the document. **Never write literal file-path citations (e.g., `` `docs/<project-code>/role_desc.md` ``) or source links in the body prose of any section** — this is a polished portfolio narrative, not a cited deliverable. Business outcomes/metrics are the user's claims (or client-reported facts) — capture them as stated, without embellishing or inflating them. Anything unresolved (a metric pending verification, a permission question) becomes an Open Questions entry, never a guess.
 
 The template lives at `templates/case-study-template.md`. Always read that file first to get the current section structure — do not hardcode the structure from memory, in case the template has been edited.
 
@@ -71,21 +71,21 @@ Ask, section by section (skip any the user says doesn't apply yet, and flag the 
 
 - **Solution Delivered:** what was built/changed to address the problem. Features, capabilities, scope — draw from existing artifacts where available.
 
-- **Outcomes & Measurable Impact:** project-level results and quantified business outcomes (adoption numbers, revenue impact, efficiency gains, cost savings, customer satisfaction, time-to-market, etc.). For each metric, ask for its source: client-reported, team-tracked, stakeholder feedback, industry benchmark, etc.
+- **My Role & Responsibilities:** the BA's title/role, where it sat in the team/program, its scope (what it owned and what it did not), and the responsibility areas it covered, with the techniques employed in each (stakeholder interviews, requirements modeling, RBAC design, domain modeling, backlog refinement, etc.). This section describes the job, not the results.
 
-- **My Role & Key Contributions:** (secondary) the BA's title/role, specific responsibilities and techniques employed (stakeholder interviews, requirements modeling, RBAC design, domain modeling, backlog refinement, etc.), and how those contributed to enabling the solution/outcomes.
+- **Key Achievements & Contributions:** what the BA personally accomplished. For each achievement, ask what the BA specifically did (actions taken, artifacts produced, decisions driven) and what result it produced (adoption numbers, efficiency gains, incident reduction, stakeholder satisfaction, time-to-market, etc.), quantified where possible. Ask how each result is known (client-reported, team-tracked, stakeholder feedback, etc.) so it can be stated accurately, and flag unquantified results under Open Questions.
 
 ### 2.4 — Draft the document
 
 Follow `templates/case-study-template.md` exactly. Populate:
 - Document Control (Client, Project — only if this case study is scoped to one specific project rather than the client generally, Author, Created date, Confidentiality Level).
 - Confidentiality & Sharing Notes — just the client/company name and the industry/domain itself (real or anonymized per the Step 2.2 decision), with no extra labels like "Real name OK to use —" or "Shareable —" prefixed to the value; the sharing decision itself already lives in the Document Control "Confidentiality Level" field.
-- All remaining sections from interview + source docs + LLM research — written as plain narrative/tables with **no inline file-path citations or source links anywhere in the body** (see No-fabrication discipline above for the one exception: Section 6's Source/Evidence column, using plain labels only):
+- All remaining sections from interview + source docs + LLM research — written as plain narrative/tables with **no inline file-path citations or source links anywhere in the body** :
   - Industry & Business Context: blend user's description with raw project info and LLM market research (trends, market context, positioning), per the 2-3 sentence limit above.
   - Problem Statement: blend user's problem framing with raw project info and LLM competitor analysis (market gaps, competitive positioning), per the short intro + bullet list format above.
-  - Solution Delivered: features/capabilities/scope only — no Impact/outcome column (that belongs in Section 6) and no file-path citations.
-  - Outcomes & Measurable Impact: each metric's Source/Evidence column uses a plain label (e.g., "documented role achievement," "user interview," "client-reported post-launch").
-  - My Role & Key Contributions (secondary) — plain narrative, no citations.
+  - Solution Delivered: features/capabilities/scope only — no Impact/outcome column (that belongs in Section 7) and no file-path citations.
+  - My Role & Responsibilities: title, a 1-2 sentence scope statement, then a bulleted list of responsibility areas (each a short bolded phrase plus what it covered). No achievements or results here.
+  - Key Achievements & Contributions: one table row per achievement — a short Dimension label (e.g., Delivery, Stakeholder Engagement, Quality, Process Improvement) and a single Achievement statement combining what the BA personally did with the result it produced. Keep the statement specific to the BA's own actions, not the wider team's.
 
 ### 2.5 — Write output
 

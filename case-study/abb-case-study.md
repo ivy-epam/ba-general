@@ -13,7 +13,7 @@ owner: ivy_li@epam.com
 |---|---|
 | Project Code | abb |
 | Author | Ivy Li (ivy_li@epam.com) |
-| Created | 2026-10-09 |
+| Created | 2026-10-13 |
 | Confidentiality Level | Client name shareable externally; industry/domain shareable |
 
 ## 2. Confidentiality & Sharing Notes
@@ -29,7 +29,11 @@ ABB's Electrification business runs EasyOrder (EO), a B2B e-commerce platform se
 
 ## 4. Problem Statement
 
-The China cutover of EasyOrder carried outsized risk: migrating **100+ B2B customer accounts** and **five critical modules** across a global-to-China regulatory and organizational boundary, with no dedicated local coordination role in place. This opened seven concrete gaps between global and China teams:
+The China cutover of EasyOrder carried outsized risk: migrating **100+ B2B customer accounts** and **five critical modules** across a global-to-China regulatory and organizational boundary, with no dedicated local coordination role in place.
+
+The China rollout had already been **delayed by more than six months**. Local business stakeholders were dissatisfied with the program and had little confidence that the migration would succeed, and they raised strong concerns about issues users might hit during onboarding.
+
+Behind this were seven concrete gaps between global and China teams:
 
 1. **Communication & alignment gaps** on planned tasks/deliverables.
 2. **Lack of system feedback** — low visibility into stability and change-request status.
@@ -51,33 +55,29 @@ The China cutover of EasyOrder carried outsized risk: migrating **100+ B2B custo
 | Change request management | Analyzed China-originated change requests and brokered feasibility/alignment between dev and business stakeholders |
 | Team coordination | Coordinated module cutover (5 modules), UAT, and production smoke testing across onshore BAs, global and local dev, support, and SAP integration teams |
 
-## 6. My Role & Key Contributions
+## 6. My Role & Responsibilities
 
-**Title:** EasyOrder — Business Engagement Manager (CN).
+**Title:** EasyOrder — Business Engagement Manager (CN)
 
-As the sole Global IS resource embedded with the local China team, I served as the primary point of contact for Chinese business stakeholders across the EasyOrder program, applying:
+As the sole Global IS resource embedded with the local China team, I was the primary point of contact for Chinese business stakeholders across the EasyOrder program. The role owned China-side stakeholder engagement, customer onboarding, incident and change coordination, and cutover coordination; the underlying microservices architecture and engineering build-out of EasyOrder Platform 2.0 were owned by other teams.
 
 - **Stakeholder management** — understanding and managing China stakeholder needs, expectations, and priorities across onboarding, incidents, and change requests.
-- **Incident lifecycle management** — accurately capturing, documenting, and escalating incidents with context, then tracking them through to SLA-bound resolution.
-- **Change request analysis** — assessing technical feasibility and implications of China-originated change requests and communicating them in business terms to stakeholders.
-- **UAT and quality coordination** — supporting UAT and running production smoke tests ahead of each biweekly release to catch regressions before they reached customers.
-- **Governance and reporting** — operating within ABB's IS Regulations, Guidelines, and agreed RACIS specifications, and preparing weekly status reports to local and global leadership.
+- **Customer onboarding management** — coordinating the 2 out of 3 waves onboarding of China customers onto EasyOrder.
+- **Incident lifecycle management** — capturing, documenting, and escalating incidents with context, then tracking them through to SLA-bound resolution.
+- **Change request coordination** — running initial technical feasibility analysis on China-originated change requests, and coordinating between the dev team and local business stakeholders to align on the requested change and the proposed solution.
+- **Cutover and UAT coordination** — coordinating module cutover, UAT, and production smoke tests ahead of each biweekly release across onshore BAs, global and local dev, support, and SAP integration teams.
+- **Governance and reporting** — operating within ABB's IS Regulations, Guidelines, and agreed RACIS specifications, and preparing weekly status reports for local and global leadership.
 
-**Scope note:** this role managed a focused slice of the much larger EasyOrder Platform 2.0 migration — China-side stakeholder engagement, incident/change coordination, and cutover coordination — rather than the underlying microservices architecture and engineering build-out of the platform itself, which is owned by other teams.
+## 7. Key Achievements & Contributions
 
-## 7. Outcomes & Measurable Impact
-
-| Metric | Value | Source / Evidence |
-|---|---|---|
-| B2B customer accounts migrated | 100+ accounts in China market | Documented role achievement |
-| Modules cut over from cBOL to EasyOrder | 5 critical modules (Order Dashboard, Order Management, Cart Pages, Availability Check, Reporting & Documentation) | Documented role achievement |
-| Release cadence maintained | Biweekly releases shipped with production stability and minimal disruption | Documented role achievement |
-| Incident frequency | Fewer incidents overall, including sustained stretches with zero incidents | User interview (team-observed, not independently quantified) |
-| Incident resolution speed | Raw resolution time did not improve materially (constrained by fixed release dates), but communication and resolution *progress* became noticeably faster and easier to track | User interview |
-| Stakeholder satisfaction | Local and global stakeholders acknowledged and expressed satisfaction with the improvement in production support, incident handling, and change request communication | User interview / stakeholder feedback (qualitative, not formally scored) |
-
-**Open Questions / unverified items:**
-- No numeric baseline/after figures exist for incident count or resolution time — the reduction is team-observed, not benchmarked against a tracked metric.
-- Stakeholder satisfaction is reported qualitatively (acknowledgement of improvement); no formal satisfaction score or survey was cited.
+| Dimension | Achievement |
+|---|---|
+| Customer Migration | Coordinated the onboarding activities that migrated 100+ B2B customer accounts in the China market onto EasyOrder. |
+| Module Cutover | Coordinated the cutover of 5 critical modules (Order Dashboard, Order Management, Cart Pages, Availability Check, Reporting & Documentation) from cBOL to EasyOrder. |
+| Release Stability | Supported UAT and ran production smoke tests ahead of each biweekly release, sustaining the release cadence with production stability and minimal disruption. |
+| Incident Reduction | Tightened incident capture, escalation, and tracking, contributing to fewer incidents overall, including sustained stretches with zero incidents. |
+| Incident Communication | Made incident resolution progress noticeably faster to communicate and easier to track; raw resolution time did not improve materially because fixes were tied to fixed release dates. |
+| Change Request Communication | Smoothed communication between the dev team and local business on new change requests, and closely followed up on their progress, making change request status transparent and the process more effective for both sides. |
+| Stakeholder Satisfaction | Earned acknowledgement and satisfaction from local and global stakeholders for improved production support, incident handling, and change request communication. |
 
 

@@ -41,6 +41,8 @@ Manual, decentralized account-planning processes left DBS's relationship manager
 
 ## 5. Solution Delivered
 
+*Scope note: as the Business Analyst, I owned requirement engineering and validation for the capabilities below, assisted the Product Owner with the backlog, and collaborated with the Product Manager on feature delivery and releases.*
+
 | Feature / Capability | Description |
 |---|---|
 | Digitalized Account Plan journey | Launched a digitalized Account Plan journey onboarded to the bank's CRM system, integrated with diverse subsystems and data sources. |
@@ -50,28 +52,39 @@ Manual, decentralized account-planning processes left DBS's relationship manager
 | Excel-to-system migration | Migrated Excel-based account plan records into the new Account Plan system. |
 | Subsystem connectivity | Established connectivity with subsystems for financials and static data, enriching the client and wealth data repository and strengthening opportunity identification and prompting capabilities. |
 
-## 6. My Role & Key Contributions
+## 6. My Role & Responsibilities
 
-**Title:** Business Analyst.
+**Title:** Business Analyst
 
-As BA on this Account Plan digitalization initiative, I:
+I was the BA on this Account Plan digitalization initiative, focusing on requirement engineering and validation and assisting the Product Owner. I worked with the Wealth Management team, compliance and risk stakeholders, and dev teams in Singapore and China.
 
-- **Mapped end-to-end user journeys and built a prioritized feature backlog** — covering RM account-planning workflows, working with the Wealth Management team.
-- **Specified data models and integration points** — across core banking systems (Finacle, Avaloq, CRM) to create a single source of truth for client data and portfolio holdings feeding the Account Plan.
-- **Elicited and documented account-planning requirements** — working with compliance and risk stakeholders to translate regulatory rules into specifications and acceptance criteria.
-- **Authored user stories with the Product Owner** — prioritized the backlog and coordinated dev teams in Singapore and China through implementation, managing dependencies with the Avaloq and Finacle workstreams.
-- **Supported the Architect and Tech Lead** — on microservice design and database schemas, and worked with UI/UX designers on Figma wireframes.
-- **Ran desk checks and pre-UAT testing** — and produced functional knowledge specs, user manuals, and training to support other teams, leadership, and operations.
+- **Requirements elicitation and specification** — mapping end-to-end RM account-planning journeys with the Wealth Management team, and working with compliance and risk stakeholders to translate regulatory rules into specifications and acceptance criteria.
+- **Data and integration specification** — specifying data models and integration points across core banking systems (Finacle, Avaloq, CRM) to create a single source of truth for client data and portfolio holdings.
+- **Requirements validation** — running desk checks and pre-UAT testing to validate delivered features against the agreed requirements and acceptance criteria.
+- **Product Owner assistance** — authoring user stories with the Product Owner, and building and prioritizing the feature backlog.
+- **Delivery and release collaboration** — collaborating with the Product Manager on feature delivery and releases, coordinating dev teams in Singapore and China through implementation, and managing dependencies with the Avaloq and Finacle workstreams.
+- **Solution design support** — supporting the Architect and Tech Lead on microservice design and database schemas, and UI/UX designers on Figma wireframes.
+- **Knowledge transfer and enablement** — producing functional knowledge specs, user manuals, and training for other teams, leadership, and operations.
 
-## 7. Outcomes & Measurable Impact
+## 7. Key Achievements & Contributions
 
-| Metric | Value |
+**Business & product impact:**
+
+| Dimension | Achievement |
 |---|---|
-| Holistic HNWI view | Gave RMs a better, unified understanding of each HNWI's investment and wealth needs. |
-| Institutionalized client engagement | Helped institutionalize client engagement in a way that drove bank inflows and revenue. |
-| Enhanced employee journey | Gave RMs quicker access to information and data in their day-to-day workflow. |
-| Streamlined process | Consolidated account planning onto a single system, replacing fragmented, segmented procedures. |
-| Central monitoring hub | Enabled deeper analytical insights and monitoring capabilities for executives and managers. |
-| Smooth handover | Enabled version control and full history of account plans, smoothing handovers between RMs and teams. |
-| Real-time tracking | Enhanced transparency and communication through real-time tracking of client strategies. |
-| Improved customer experience | Increased service quality and satisfaction for HNWI clients. |
+| Client Insight | Specified the data models and core-banking integrations (Finacle, Avaloq, CRM) behind a single source of truth, giving RMs a unified view of each HNWI's investment and wealth needs. |
+| RM Experience | Translated end-to-end RM account-planning journeys into prioritized requirements, giving RMs quicker access to information and data in their day-to-day workflow. |
+| Process Consolidation | Specified and validated the move of Excel-based account plans onto a single system, replacing fragmented, segmented procedures. |
+| Handover Continuity | Defined the requirements for version control and full account plan history, smoothing handovers between RMs and teams. |
+| Management Insight & Transparency | Defined the monitoring and real-time tracking requirements that gave executives and managers deeper analytical insight into, and transparency over, client strategies. |
+| Client Engagement & Experience | Contributed to institutionalizing client engagement through the Account Plan, driving bank inflows and revenue and raising service quality and satisfaction for HNWI clients. |
+
+**Delivery & collaboration:**
+
+| Dimension | Achievement |
+|---|---|
+| On-Track Delivery | Worked with the Product Manager and dev teams in Singapore and China to keep feature deliveries and releases smooth and on track. |
+| Requirements & Documentation Management | Kept requirements, user stories, and supporting documentation well managed, up to date, and aligned across the Product Owner, dev teams, and business stakeholders. |
+| Business–Dev Communication | Bridged business stakeholders and the dev teams, making communication between the two sides effective and keeping requirements clearly understood through implementation. |
+| UAT & Demo Readiness | Ran desk checks and pre-UAT testing ahead of each release, enabling a smooth UAT and demo process with business stakeholders. |
+
