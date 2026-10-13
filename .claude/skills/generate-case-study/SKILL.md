@@ -69,7 +69,9 @@ Ask, section by section (skip any the user says doesn't apply yet, and flag the 
   - Supplement: perform LLM-driven competitor analysis (competitors' offerings, market gaps, positioning opportunities, industry benchmarks) to frame the user's problem statement in competitive context and inspire alternative framings if helpful.
   - Write-up: open with a **1-2 sentence** framing of the core risk/challenge, then list the concrete pain points as a short bulleted/numbered list (each bullet a short bolded phrase, not a full paragraph). Let competitor analysis sharpen the framing without naming specific competitors or other companies, and without inline source links/citations in the prose.
 
-- **Solution Delivered:** what was built/changed to address the problem. Features, capabilities, scope — draw from existing artifacts where available.
+- **Solution Delivered:** first ask which one applies to this engagement — it is either role onboarding or project delivery, never both:
+  - **Project delivery:** what was built/changed to address the problem, and what the BA owned for it. Features, capabilities, scope — draw from existing artifacts where available.
+  - **Role onboarding:** the BA was onboarded into a dedicated role to close a manpower and/or skills gap in the client's team. Ask which role, which capabilities/areas it owned for the client, and what was explicitly out of scope (e.g., the platform itself, owned by another team).
 
 - **My Role & Responsibilities:** the BA's title/role, where it sat in the team/program, its scope (what it owned and what it did not), and the responsibility areas it covered, with the techniques employed in each (stakeholder interviews, requirements modeling, RBAC design, domain modeling, backlog refinement, etc.). This section describes the job, not the results.
 
@@ -83,7 +85,10 @@ Follow `templates/case-study-template.md` exactly. Populate:
 - All remaining sections from interview + source docs + LLM research — written as plain narrative/tables with **no inline file-path citations or source links anywhere in the body** :
   - Industry & Business Context: blend user's description with raw project info and LLM market research (trends, market context, positioning), per the 2-3 sentence limit above.
   - Problem Statement: blend user's problem framing with raw project info and LLM competitor analysis (market gaps, competitive positioning), per the short intro + bullet list format above.
-  - Solution Delivered: features/capabilities/scope only — no Impact/outcome column (that belongs in Section 7) and no file-path citations.
+  - Solution Delivered: open with a one-sentence italic *Scope note* that frames the single dimension that applies, then one `Feature / Capability | Description` table (one row per capability, one-sentence descriptions).
+    - Role onboarding: the note says the solution was to onboard a dedicated <role> to own <areas> — and what it was *not* (e.g., not rebuilding the platform, which remained owned by another team). Rows are the capabilities the role brought to the client (e.g., incident management, local SME function, release planning).
+    - Project delivery: the note states the BA's role and ownership over the capabilities listed (e.g., requirement engineering and validation, working with the PO/PM). Rows are the product features/capabilities delivered.
+    - No Impact/outcome column (that belongs in Section 7) and no file-path citations.
   - My Role & Responsibilities: title, a 1-2 sentence scope statement, then a bulleted list of responsibility areas (each a short bolded phrase plus what it covered). No achievements or results here.
   - Key Achievements & Contributions: one table row per achievement — a short Dimension label (e.g., Delivery, Stakeholder Engagement, Quality, Process Improvement) and a single Achievement statement combining what the BA personally did with the result it produced. Keep the statement specific to the BA's own actions, not the wider team's.
 

@@ -22,8 +22,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | Merck |
-| Industry / Domain | Pharmaceutical — clinical trials data management and discrepancy reporting (GxP-regulated) |
+| Client | Merck |
+| Domain | Pharmaceutical — clinical trials data management and discrepancy reporting (GxP-regulated) |
 
 ## 3. Industry & Business Context
 

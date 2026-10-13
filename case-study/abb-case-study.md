@@ -20,8 +20,8 @@ owner: ivy_li@epam.com
 
 | Field | Value |
 |---|---|
-| Client / Company Name | ABB |
-| Industry / Domain | Electrification business, industrial B2B e-commerce |
+| Client | ABB |
+| Domain | Electrification business, industrial B2B e-commerce |
 
 ## 3. Industry & Business Context
 

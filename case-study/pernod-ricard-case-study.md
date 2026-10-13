@@ -22,8 +22,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | Pernod Ricard |
-| Industry / Domain | Spirits & beverages — enterprise data platform (China market) |
+| Client | Pernod Ricard |
+| Domain | Spirits & beverages — enterprise data platform (China market) |
 
 ## 3. Industry & Business Context
 

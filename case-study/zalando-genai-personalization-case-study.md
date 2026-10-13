@@ -23,8 +23,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | Zalando |
-| Industry / Domain | European fashion & lifestyle e-commerce — personalized search and GenAI-driven discovery |
+| Client | Zalando |
+| Domain | European fashion & lifestyle e-commerce — personalized search and GenAI-driven discovery |
 
 ## 3. Industry & Business Context
 

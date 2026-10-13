@@ -23,8 +23,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | DBS Bank |
-| Industry / Domain | Banking & lending — premium financing, Hong Kong (APEC) |
+| Client | DBS Bank |
+| Domain | Banking & lending — premium financing, Hong Kong (APEC) |
 
 ## 3. Industry & Business Context
 

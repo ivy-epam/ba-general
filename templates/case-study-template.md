@@ -23,8 +23,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | {{Real name, or anonymized description}} |
-| Industry / Domain | {{Named industry/domain, or generic description}} |
+| Client | {{Real name, or anonymized description}} |
+| Domain | {{Named industry/domain, or generic description}} |
 
 ## 3. Industry & Business Context
 
@@ -36,9 +36,13 @@ used_by_skill: generate-case-study
 
 ## 5. Solution Delivered
 
+*Scope note: {{One sentence framing what the solution was, using the one that applies — a case study is either role onboarding or project delivery, never both:
+- Role onboarding (closing a manpower/skills gap): "the solution was to onboard a dedicated {{role}} to {{what the role owned}} — not to build/rebuild {{the platform/product}} itself, which remained owned by {{other team}}."
+- Project delivery: "as the {{role}}, I owned {{e.g., requirement engineering and validation}} for the capabilities below, {{how I worked with PO/PM/engineering}}."}}*
+
 | Feature / Capability | Description |
 |---|---|
-| {{...}} | {{...}} |
+| {{Role onboarding: a capability the role brought to the client, e.g., incident management, local SME function. Project delivery: a product feature/capability built or changed.}} | {{One sentence on what it covered or did, and the problem it addressed}} |
 
 ## 6. My Role & Responsibilities
 

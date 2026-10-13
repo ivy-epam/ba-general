@@ -22,8 +22,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | FTLife (formerly CTF Life) |
-| Industry / Domain | Life insurance — Hong Kong/Macau and Greater China agent recruitment digitalization |
+| Client | FTLife (formerly CTF Life) |
+| Domain | Life insurance — Hong Kong/Macau and Greater China agent recruitment digitalization |
 
 ## 3. Industry & Business Context
 

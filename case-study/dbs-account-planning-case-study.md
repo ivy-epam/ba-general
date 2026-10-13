@@ -23,8 +23,8 @@ used_by_skill: generate-case-study
 
 | Field | Value |
 |---|---|
-| Client / Company Name | DBS Private Bank |
-| Industry / Domain | Private banking & wealth management — Singapore/Hong Kong HNWI relationship management |
+| Client | DBS Private Bank |
+| Domain | Private banking & wealth management — Singapore/Hong Kong HNWI relationship management |
 
 ## 3. Industry & Business Context
 
