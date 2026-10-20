@@ -1,6 +1,6 @@
 # Project guidelines
 
-Rules for how skills in `.claude/skills/` and templates in `templates/` are written, and for how every skill behaves when it runs. Skills state only what is specific to them; anything here is not repeated in each skill. **Where a skill explicitly says otherwise, the skill wins** (e.g. `generate-case-study` has no update mode or versioning; `assess-candidate` writes no file).
+Rules for how skills in `.claude/skills/` and templates in `templates/` are written, and for how every skill behaves when it runs. Skills state only what is specific to them; anything here is not repeated in each skill. **Where a skill explicitly says otherwise, the skill wins** (e.g. `generate-case-study` has no update mode or versioning; `assess-candidate` writes its interview pack to `references/interview-candidate-data/` with no versioning).
 
 ## Writing skills and templates
 
