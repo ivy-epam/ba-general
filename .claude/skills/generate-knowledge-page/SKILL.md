@@ -13,11 +13,11 @@ Does three things in one run: marks a specific user story as **Delivered**, phys
 
 **Audience-appropriate writing.** Unlike the other six artifacts in this project (formal BA register), this page must read as plain, scannable prose for people who just need to understand the feature — no BA-document jargon, no Gherkin syntax, no raw CRUD matrices. Translate source content into plain language; don't copy formal phrasing verbatim.
 
-**Sourcing discipline (same as the other skills):** the PRD, Feature Analysis (To-Be process + NFRs), Use Cases, RBAC, and delivered User Stories documents are the primary sources — this skill summarizes/translates them, it never invents facts. Interview only fills genuine gaps the sources don't cover (mainly ops-specific operational notes).
+**Sources:** the PRD, Feature Analysis (To-Be process + NFRs), Use Cases, RBAC, and delivered User Stories documents — this skill summarizes/translates them. Interview mainly covers ops-specific operational notes the NFR section doesn't.
 
-The template lives at `templates/knowledge-page-template.md` in this project. Always read that file first to get the current section structure — do not hardcode the structure from memory, in case the template has been edited.
+The template lives at `templates/knowledge-page-template.md` in this project.
 
-The knowledge page is written to `outputs/feature-<feature>/<feature>-knowledge.md` — one page per **feature**, not per use case or story. Never write it anywhere else (not the user's home directory, Desktop, or another project).
+The knowledge page is written to `outputs/feature-<feature>/<feature>-knowledge.md` — one page per **feature**, not per use case or story.
 
 ## Workflow
 
@@ -40,12 +40,12 @@ The knowledge page is written to `outputs/feature-<feature>/<feature>-knowledge.
    - `outputs/rbac.md` — Roles Inventory and RBAC Matrix rows relevant to this feature's resources (Roles & Access, translated to plain language).
    - Every story file under `outputs/delivered/US-*/` belonging to this feature (found via the feature's use cases) — these define what's actually live for "Delivered Scope So Far" and for scoping Key Capabilities/How It Works to what's shipped, not just planned.
 
-5. **No fabrication; interview only for genuine gaps** — mainly operational notes the NFR section doesn't cover. Everything else must trace to a source document; don't guess at plain-language framing that changes the actual meaning of a requirement.
+5. **Plain-language framing must not change the actual meaning** of a requirement.
 
 6. **Draft or update the page** per `templates/knowledge-page-template.md`:
-   - **First run:** write every section from the gathered sources, seed "Delivered Scope So Far" with just this delivery, set version `1.0`.
-   - **Later runs:** only refresh Key Capabilities / How It Works / Roles & Access if this newly delivered story actually changes what's true there (a delivery that doesn't add new capability shouldn't cause a rewrite). Always add a new row to "Delivered Scope So Far." Bump the version and log the change in Revision History, referencing the specific use case/story that triggered it (e.g., "v1.2 — added refund capability per US-04 (UC-03) delivery").
+   - **First run:** write every section from the gathered sources and seed "Delivered Scope So Far" with just this delivery.
+   - **Later runs:** only refresh Key Capabilities / How It Works / Roles & Access if this newly delivered story actually changes what's true there (a delivery that doesn't add new capability shouldn't cause a rewrite). Always add a new row to "Delivered Scope So Far." The Revision History row references the specific use case/story that triggered it (e.g., "v1.2 — added refund capability per US-04 (UC-03) delivery").
 
-7. **Write the output** to `outputs/feature-<feature>/<feature>-knowledge.md` (create the folder if it doesn't exist).
+7. **Write the output** to `outputs/feature-<feature>/<feature>-knowledge.md`.
 
-8. **Summarize for the user**: which story was marked delivered and moved (and to where), what changed in the knowledge page (or that it was newly created), and anything left as an open item.
+8. **Summarize for the user**, also covering which story was marked delivered and moved (and to where).

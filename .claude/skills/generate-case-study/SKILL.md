@@ -22,11 +22,11 @@ Produces **a business case study** (`case-study/<client-code>[-<project-code>]-c
 
 Record the answers in the document's **Confidentiality & Sharing Notes** section and apply them consistently through every later section.
 
-**No-fabrication discipline (same as every other skill in this project):** every factual business claim (problem, solution, scope) must trace to a source document or a direct interview answer — but that traceability is an internal discipline, not something printed inline in the document. **Never write literal file-path citations (e.g., `` `docs/<project-code>/role_desc.md` ``) or source links in the body prose of any section** — this is a polished portfolio narrative, not a cited deliverable. Business outcomes/metrics are the user's claims (or client-reported facts) — capture them as stated, without embellishing or inflating them. Anything unresolved (a metric pending verification, a permission question) becomes an Open Questions entry, never a guess.
+**No fabrication — but traceability stays internal**, not printed inline in the document. **Never write literal file-path citations (e.g., `` `docs/<project-code>/role_desc.md` ``) or source links in the body prose of any section** — this is a polished portfolio narrative, not a cited deliverable. Business outcomes/metrics are the user's claims (or client-reported facts) — capture them as stated, without embellishing or inflating them.
 
-The template lives at `templates/case-study-template.md`. Always read that file first to get the current section structure — do not hardcode the structure from memory, in case the template has been edited.
+The template lives at `templates/case-study-template.md`.
 
-**Output location:** `case-study/<client-code>[-<project-code>]-case-study.md` — a top-level folder, a sibling of `outputs/` at the repo root, not nested inside it. Never written anywhere else (not the user's home directory, Desktop, or another project).
+**Output location:** `case-study/<client-code>[-<project-code>]-case-study.md` — a top-level folder, a sibling of `outputs/` at the repo root, not nested inside it.
 
 ## Step 0 — Identify the client (and project, if applicable)
 
@@ -47,7 +47,7 @@ Check whether `case-study/<client-code>[-<project-code>]-case-study.md` already 
 Check for, and read where present:
 - Raw project/product information under `docs/<client-code>/` (market research, product overviews, competitive landscape, business background, etc.)
 
-If none exist, tell the user plainly and proceed via interview + LLM research — this is not a blocker.
+If none exist, tell the user plainly and proceed via interview + LLM research.
 
 Extract **factual project/market grounding** from the documentation (purpose/background, target market, key features, product positioning, market context, competitive landscape) for the business context and problem statement sections. Never pull personal-role, challenge, or achievement content from these docs — they describe the product/market, not the contractor's personal contribution.
 
@@ -94,9 +94,9 @@ Follow `templates/case-study-template.md` exactly. Populate:
 
 ### 2.5 — Write output
 
-Create the `case-study/` folder if it doesn't exist (top-level, sibling of `outputs/`, at the repo root). Write to `case-study/<client-code>[-<project-code>]-case-study.md`.
+Write to `case-study/<client-code>[-<project-code>]-case-study.md`.
 
-### 2.6 — Chat-only summary
+### 2.6 — Summary
 
 Summarize for the user: what raw project info was read from `docs/<client-code>/`, what was gathered via interview, the market research and competitor insights added, and the confidentiality decisions applied. Invite the user to review and manually edit the file as needed.
 
@@ -104,7 +104,6 @@ Summarize for the user: what raw project info was read from `docs/<client-code>/
 
 The case study is created once at offboarding. Any further edits are done manually by the user.
 
-- **No fabrication:** every business/problem/solution/outcome fact traces to a source document (with citation) or direct interview answer; metrics are sourced (client-reported, team-tracked, etc.), not guessed. If something cannot be verified, ask the user to clarify rather than inferring.
+- **Metrics are sourced** (client-reported, team-tracked, etc.), not guessed.
 - **Confidentiality:** client name and industry/domain decisions are confirmed in Step 2.2 before drafting.
-- **Business facts come from source docs or interview:** solution/scope/features from artifacts, problem/outcomes/business context from the user's own understanding/client reports; never inferred.
-- **Chat-only summaries** — never restate the full document in chat after writing it.
+- **Where facts come from:** solution/scope/features from artifacts; problem/outcomes/business context from the user's own understanding/client reports.

@@ -9,7 +9,60 @@ used_by_skill: generate-prd
 
 # {{Project Code}} — Product Requirements Document
 
-## 1. Document Control & Revision History
+## 1. Purpose & Background
+
+{{Problem statement / business context.}}
+
+## 2. Goals & Success Metrics
+
+{{Product-level objectives and measurable KPIs.}}
+
+## 3. Scope
+
+**In scope:**
+- {{capability-level item}}
+
+**Out of scope:**
+- {{capability-level item}}
+
+## 4. Target Users / Personas
+
+{{Who this product/feature is for.}}
+
+## 5. Key Features / Capabilities Overview
+
+{{High-level description of what the product will do.}}
+
+## 6. Release / Phasing Plan
+
+{{MVP scope vs. later phases, if known.}}
+
+## 7. Risks & Mitigations
+
+| Risk | Mitigation |
+|---|---|
+| {{...}} | {{...}} |
+
+## 8. Open Questions
+
+{{Unresolved items.}}
+
+## 9. Glossary / Appendix
+
+{{Terms, definitions, or supporting reference material.}}
+
+## 10. Assumptions, Constraints & Dependencies
+
+**Assumptions:**
+- {{...}}
+
+**Constraints:**
+- {{...}}
+
+**Dependencies:**
+- {{...}}
+
+## 11. Document Control & Revision History
 
 | Field | Value |
 |---|---|
@@ -22,56 +75,3 @@ used_by_skill: generate-prd
 | Version | Date | Change Description | Trigger / Reason |
 |---|---|---|---|
 | 1.0 | {{date}} | Initial draft | {{e.g., "Created from BRD"}} |
-
-## 2. Purpose & Background
-
-{{Problem statement / business context, reframed from source material at a product level.}}
-
-## 3. Goals & Success Metrics
-
-{{Product-level objectives and measurable KPIs.}}
-
-## 4. Scope
-
-**In scope:**
-- {{capability-level item}}
-
-**Out of scope:**
-- {{capability-level item}}
-
-## 5. Target Users / Personas
-
-{{Who this product/feature is for.}}
-
-## 6. Key Features / Capabilities Overview
-
-{{High-level description of what the product will do — capabilities, not detailed functional requirements or user stories.}}
-
-## 7. Release / Phasing Plan
-
-{{MVP scope vs. later phases, if known.}}
-
-## 8. Risks & Mitigations
-
-| Risk | Mitigation |
-|---|---|
-| {{...}} | {{...}} |
-
-## 9. Open Questions
-
-{{Unresolved items, including any conflicts found across source documents, and gaps not covered by any source or interview answer.}}
-
-## 10. Glossary / Appendix
-
-{{Terms, definitions, or supporting reference material.}}
-
-## 11. Assumptions, Constraints & Dependencies
-
-**Assumptions:**
-- {{...}}
-
-**Constraints:**
-- {{...}}
-
-**Dependencies:**
-- {{...}}

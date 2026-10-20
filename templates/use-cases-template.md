@@ -9,31 +9,16 @@ used_by_skill: generate-use-cases
 
 # {{Feature Name}} — Use Case Specifications
 
-## 1. Document Control & Revision History
-
-| Field | Value |
-|---|---|
-| Feature Name | {{feature name}} |
-| Related Feature Analysis | {{link/path to outputs/feature-<feature>/<feature>-feature-analysis.md, or "None"}} |
-| Author | {{author}} |
-| Status | Draft / In Review / Approved |
-
-**Revision History**
-
-| Version | Date | Change Description | Trigger / Reason |
-|---|---|---|---|
-| 1.0 | {{date}} | Initial draft | {{e.g., "Derived from To-Be process in Feature Analysis"}} |
-
-## 2. Use Case Summary
+## 1. Use Case Summary
 
 | ID | Name | Primary Actor | Brief Description |
 |---|---|---|---|
 | UC-01 | {{...}} | {{...}} | {{one-line goal}} |
 | UC-02 | {{...}} | {{...}} | {{one-line goal}} |
 
-## 3. Use Case Details
+## 2. Use Case Details
 
-*One block per use case below. Repeat this block for each confirmed use case — do not omit fields; use "Not applicable" or move an unresolved item to Open Questions rather than leaving a field blank.*
+*One block per use case.*
 
 ### UC-01: {{Use Case Name}}
 
@@ -62,8 +47,21 @@ used_by_skill: generate-use-cases
 
 **Related Use Cases:** {{"Includes UC-0X" / "Extends UC-0X" / "None"}}
 
-<!-- Repeat "### UC-0X: <Name>" block above for each additional confirmed use case -->
+## 3. Open Questions
 
-## 4. Open Questions
+- **{{UC-0X}}:** {{unresolved item}}
 
-{{Unresolved items across all use cases, each tagged with its UC ID, including any conflicts found between sources and any business rules referenced but not yet documented in the Feature Analysis.}}
+## 4. Document Control & Revision History
+
+| Field | Value |
+|---|---|
+| Feature Name | {{feature name}} |
+| Related Feature Analysis | {{link/path to outputs/feature-<feature>/<feature>-feature-analysis.md, or "None"}} |
+| Author | {{author}} |
+| Status | Draft / In Review / Approved |
+
+**Revision History**
+
+| Version | Date | Change Description | Trigger / Reason |
+|---|---|---|---|
+| 1.0 | {{date}} | Initial draft | {{e.g., "Derived from To-Be process in Feature Analysis"}} |

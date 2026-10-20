@@ -11,9 +11,9 @@ Formalizes a single story's existing Gherkin Acceptance Criteria (written by `ge
 
 **Adapted from the `func-test` skill pattern** (scenario groups, priority levels, traceability rules, execution-order optimization), but without a separate living checklist file — coverage analysis and quality checks are folded into inline self-verification steps here, consistent with every other skill in this project (one output artifact, no helper files).
 
-The template lives at `templates/func-test-template.md` in this project. Always read that file first to get the current section structure — do not hardcode the structure from memory, in case the template has been edited.
+The template lives at `templates/func-test-template.md` in this project.
 
-The output is written to `outputs/<bucket>/US-<use-case-name>/<use-case-name>-func-test-0X.md` — right next to its source story file, in whichever sprint bucket that story currently lives in. Named `-func-test` specifically (not a generic `-tests`) since other test types (e.g. smoke tests) are tracked separately. Never write it anywhere else (not the user's home directory, Desktop, or another project).
+The output is written to `outputs/<bucket>/US-<use-case-name>/<use-case-name>-func-test-0X.md` — right next to its source story file, in whichever sprint bucket that story currently lives in. Named `-func-test` specifically (not a generic `-tests`) since other test types (e.g. smoke tests) are tracked separately.
 
 ## Step 1 — Analyze & classify
 
@@ -70,5 +70,5 @@ Before finalizing, confirm: every test case has a traceable source reference; no
 ## Step 8 — Draft and write the output
 
 1. Draft the document following `templates/func-test-template.md` exactly — Classification & Scope, Assumptions & Clarifications, Test Case Summary (counts per scenario group × priority), Test Cases (in execution order), Coverage Notes, Open Questions.
-2. Write to `outputs/<bucket>/US-<use-case-name>/<use-case-name>-func-test-0X.md`, using the same `<bucket>` and story number `0X` as the source story file (create the folder if it somehow doesn't exist — it should already exist alongside that story's `-US-0X.md` file). Version `1.0`, first Revision History row "Initial draft."
-3. **Summarize for the user**: classification, test case counts per scenario group/priority, what's traceable vs. flagged as an assumption, and what's left open.
+2. Write to `outputs/<bucket>/US-<use-case-name>/<use-case-name>-func-test-0X.md`, using the same `<bucket>` and story number `0X` as the source story file.
+3. **Summarize for the user**, also covering classification, test case counts per scenario group/priority, and what's traceable vs. flagged as an assumption.

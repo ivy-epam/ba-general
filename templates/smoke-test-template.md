@@ -9,44 +9,38 @@ used_by_skill: generate-smoke-test
 
 # Smoke Test Suite
 
-*A single, cumulative, product-wide suite for build-stability verification — not exhaustive testing. Updated iteratively as features are added or changed.*
+*A single, cumulative, product-wide suite for build-stability verification — not exhaustive testing. Organised by module; updated iteratively as features are added or changed.*
 
-## 1. Document Control & Revision History
+## 1. Module Status & Coverage
 
-| Field | Value |
-|---|---|
-| Status | Draft / In Review / Approved |
-
-**Revision History**
-
-| Version | Date | Feature(s) | Iteration Delta | Trigger / Reason |
+| Module | Status | P0 Count | P1 Count | Last Reviewed |
 |---|---|---|---|---|
-| 1.0 | {{date}} | {{feature(s)}} | Added: {{IDs}} | {{e.g., "Initial smoke suite seeded from <feature>"}} |
+| {{...}} | {{New / Updated / Unchanged / Deprecated}} | {{n}} | {{n}} | {{date}} |
 
-## 2. Module (Feature) Status
+## 2. Use Case Priorities & Smoke Test Cases
 
-*Doubles as the scope baseline for future runs — compare against this table rather than a separate baseline file.*
+*Grouped by module: a priority table of all its use cases, then details and test cases for the `P0`/`P1` use cases.*
 
-| Feature | Project Code | Status | Last Reviewed |
-|---|---|---|---|
-| {{...}} | {{...}} | {{New / Updated / Unchanged / Deprecated}} | {{date}} |
+### {{Module}}
 
-## 3. Smoke Test Coverage Matrix
+**Use Case Priorities**
 
-| Feature | P0 Count | P1 Count |
-|---|---|---|
-| {{...}} | {{n}} | {{n}} |
+| UC ID | Use Case | Compliance | Frequency | User Volume | Business Value | Score | Priority | Priority Basis | Rationale |
+|---|---|---|---|---|---|---|---|---|---|
+| UC-01 | {{...}} | {{0/1}} | {{0/1}} | {{0/1}} | {{0/1/2}} | {{S, or "Gate"}} | {{P0/P1/P2}} | {{Matrix / func-test}} | {{one line per dimension score}} |
 
-## 4. Smoke Test Cases
+#### {{UC-0X}} — {{Use Case Name}} ({{P0/P1}})
 
-*Grouped by feature. P0/P1 only. Happy flow or critical parallel alternatives only — not exhaustive.*
+**Description:** {{what the actor accomplishes}}
+**Primary Actor:** {{role}}
+**Primary Flow:** {{Step → Step → Step}}
 
-#### {{Feature}}-{{UC-0X}}-ST-001
+##### {{Module}}-{{UC-0X}}-ST-001
 
 **Priority:** {{P0/P1}}
-**Iteration Action:** {{New / Updated / Carry-Forward / Deprecated}}
+**Status:** {{New / Updated / Unchanged / Deprecated}}
 **Title:** {{1-line scenario description}}
-**Source:** {{use case + func-test Test ID this was pulled from, e.g. "UC-02, POS-1"}}
+**Source:** {{module use case, e.g. "{{Module}} / UC-02"; plus feature use case and func-test Test ID where applicable}}
 
 **Given:** {{precondition}}
 **When:** {{action}}
@@ -56,20 +50,30 @@ used_by_skill: generate-smoke-test
 **Cleanup:** {{rollback/cleanup step if this test writes anything, or "Not applicable — read-only"}}
 **Assumptions:** {{"None" or noted assumption}}
 
-<!-- Repeat the test case block above for each additional smoke test case -->
+## 3. Out of Scope
 
-## 5. Out of Scope
+*Use cases or flows excluded by the production-safety rules.*
 
-*Use cases/flows excluded solely by the production-safety rules (not by low priority) — kept cumulatively, not just this run's exclusions.*
-
-| Feature / Use Case | Reason Excluded |
+| Module / Use Case | Reason Excluded |
 |---|---|
 | {{...}} | {{e.g., "Write visible to a real user (access grant) with no dedicated-QA-account path"}} |
 
-## 6. Recommendations
+## 4. Recommendations
 
 {{Critical paths not covered that should be added; ambiguities needing clarification before execution.}}
 
-## 7. Open Questions
+## 5. Open Questions
 
-{{Unresolved items, including use cases with no func-test file yet to pull priority from.}}
+{{Unresolved items.}}
+
+## 6. Document Control & Revision History
+
+| Field | Value |
+|---|---|
+| Status | Draft / In Review / Approved |
+
+**Revision History**
+
+| Version | Date | Module(s) | Trigger Feature(s) | Iteration Delta | Trigger / Reason |
+|---|---|---|---|---|---|
+| 1.0 | {{date}} | {{module(s)}} | {{feature(s), or "None"}} | Added: {{IDs}} | {{e.g., "Initial smoke suite seeded from scope analysis"}} |
