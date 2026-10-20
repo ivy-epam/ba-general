@@ -20,7 +20,7 @@ Questions for every interview aspect except **candidate assessment focuses**, wh
 
 | Section | Max Mandatory | Smallest allocation occurs when |
 |---|---|---|
-| Business | 7 | Primary focus, with a secondary focus and a plus responsibility |
+| Business | 10 | Primary focus, with a secondary focus and a plus responsibility |
 | System · Data | 4 | Secondary focus, with a plus responsibility |
 | Each plus responsibility | 3 | Always |
 | Agile | 3 | Always |
@@ -92,7 +92,7 @@ Questions for every interview aspect except **candidate assessment focuses**, wh
 | DA-08 | Optional | Data quality management | A live dashboard used for daily decisions has twice shown wrong figures after a source system failed overnight. What would you put in place so problems are caught before users see them? | Automated checks for completeness, freshness, and thresholds; alerts; data status shown on the dashboard; incident process; user communication |
 | DA-09 | Optional | Data requirements | A source-system team plans to change the format and meaning of a field that several of your reports depend on. How would you assess the impact and manage the change? | Identifies dependent reports and users through lineage; assesses impact; agrees timing with the source team; updates mappings; tests; communicates |
 | DA-10 | Optional | Data compliance | An analysis needs individual-level data that includes personal information. How would you make sure its use complies with the privacy regulations that apply? | **Perspective:** compliant use of data in analysis (BA-21, SA-13, and AI-02 cover personal data from other angles). Legal basis; data minimisation; anonymisation or pseudonymisation; access control; retention; involves the data protection function |
-| DA-11 | Optional | SQL and data querying | Account details are in one table and transactions in another. You need a report listing every account with its total spending per quarter, including accounts with no transactions in a quarter. Explain how you would build the query and why each choice matters. | Joins the tables; LEFT JOIN so accounts with no transactions are kept; groups by account and quarter; SUM; converts dates to quarters; turns empty totals into 0 |
+| DA-11 | Optional | SQL and data querying | Account details are in one table and transactions in another. You need a list of every account with its total transaction amount, including accounts with no transactions. How would you write the query, and what would change if you used JOIN instead of LEFT JOIN? | Joins the tables on the account ID; LEFT JOIN keeps accounts with no transactions, while JOIN drops them; GROUP BY account; SUM of the amount; shows 0 instead of an empty total |
 | DA-12 | Optional | Reporting | A monthly report takes an analyst two days of manual spreadsheet work and has contained errors twice this year. How would you automate it so it's reliable and can scale to more data and users? | Understands the current process; automates extraction and transformation; validation checks; scheduling; version control; documentation; designed to scale |
 
 ## Project Manager

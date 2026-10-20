@@ -1,6 +1,6 @@
 ---
 name: assess-candidate
-description: Assess an analyst candidate's fit for a position — clarifying the role's positioning, grading analysis seniority against the competency reference, and producing interview focus areas and a 26-question interview pack (bank questions plus scenario questions targeting the candidate's gaps). Use when the user asks to assess a candidate, evaluate a resume/CV, or prepare interview questions for an analyst or hybrid role.
+description: Assess an analyst candidate's fit for a position — clarifying the role's positioning, grading analysis seniority against the competency reference, and producing interview focus areas and a 29-question interview pack (bank questions, scenario questions targeting the candidate's gaps, and leadership questions probing A3 potential). Use when the user asks to assess a candidate, evaluate a resume/CV, or prepare interview questions for an analyst or hybrid role.
 ---
 
 # Assess Candidate
@@ -16,7 +16,7 @@ Assesses an analyst candidate's fit for a position from their resume and, option
 
 E.g. "Business + System analyst, plus Scrum Master" or "Business + Data analyst, no plus responsibility." A candidate is assessed against the positioning the role actually needs.
 
-**Reference:** `references/seniority-competency-definition-business-analysis.md` — the analysis seniority baseline. Only **A2** (Business Analyst) and **A3** (Senior Business Analyst) are in scope. Always read the current file rather than applying competencies from memory, in case it has been edited. Focus-specific skills (system, data) and the plus responsibility aren't covered by it; those come from Step 1.
+**Reference:** `references/seniority-competency-definition-business-analysis.md` (in the project-root `references/` folder, as are all paths in this skill) — the analysis seniority baseline. Only **A2** (Business Analyst) and **A3** (Senior Business Analyst) are in scope. Always read the current file rather than applying competencies from memory, in case it has been edited. Focus-specific skills (system, data) and the plus responsibility aren't covered by it; those come from Step 1.
 
 ## Step 1 — Clarify role positioning (hard stop)
 
@@ -62,39 +62,46 @@ Summarise what the interview should focus on for each aspect, drawing on the rol
 | **AI use in daily work** | Expected AI usage at the met seniority level |
 | **Soft skills** | Soft skills the JD and positioning call for |
 | **Candidate assessment** | Gaps, Partial/None ratings, and points needing clarification from Step 4 |
-
+| **Leadership & influence** | Below A2 or A2: signs of A3 potential. A3: depth of leadership and influence. Covers shaping ways of working and BA processes, team leadership, and coaching other BAs |
 **Wait for the user's review** before generating questions.
 
 ## Step 6 — Generate interview questions
 
 Read `references/interview-question-bank.md` — always the current file, not from memory.
 
-**Allocation — 26 questions in total:** 5 generated scenario questions, plus 21 selected from the bank:
+**Allocation — 29 questions in total:** 24 selected from the bank, plus 5 generated (3 scenario, 2 leadership):
 
-| Focuses | Plus resp. | Primary focus | Secondary focus | Plus resp. | Agile | Soft skills | AI | Scenario | Total |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | None | 14 | — | — | 3 | 2 | 2 | 5 | 26 |
-| 1 | One | 11 | — | 3 | 3 | 2 | 2 | 5 | 26 |
-| 2 | None | 8 | 6 | — | 3 | 2 | 2 | 5 | 26 |
-| 2 | One | 7 | 4 | 3 | 3 | 2 | 2 | 5 | 26 |
+| Focuses | Plus resp. | Primary focus | Secondary focus | Plus resp. | Agile | Soft skills | AI | Scenario | Leadership | Total |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | None | 17 | — | — | 3 | 2 | 2 | 3 | 2 | 29 |
+| 1 | One | 14 | — | 3 | 3 | 2 | 2 | 3 | 2 | 29 |
+| 2 | None | 11 | 6 | — | 3 | 2 | 2 | 3 | 2 | 29 |
+| 2 | One | 10 | 4 | 3 | 3 | 2 | 2 | 3 | 2 | 29 |
 
-Fixed counts: Agile 3, Soft skills 2, AI 2, plus responsibility 3 (when there is one), scenario 5. Analysis focus gets the rest; with two focuses, the primary gets more.
-
+Fixed counts: Agile 3, Soft skills 2, AI 2, plus responsibility 3 (when there is one), scenario 3, leadership 2. Analysis focus gets the rest; with two focuses, the primary gets more.
 1. **Bank aspects — select.** Use only the sections for the confirmed focus(es) and plus responsibility. For each aspect:
    - **Mandatory** questions are always selected and count toward its allocation.
    - Fill the remaining places with **Optional** questions that best fit the focuses confirmed in Step 5, each with a one-line rationale tied to this candidate or JD (e.g. "probes the Partial rating on stakeholder management", "JD stresses regulatory change").
 
-   Keep each question's ID; light rewording to fit the JD's domain is fine, but don't write new questions for these aspects. If a section's Mandatory questions exceed its allocation, keep the allocation, select the Mandatory questions in bank order, and flag the bank for correction.
-2. **Candidate assessment — generate.** After selecting the bank questions, create **5 scenario-based questions** that verify the gaps, areas needing improvement, and insufficiencies identified in Step 4, calibrated to the met seniority level. They must not repeat or paraphrase any selected bank question — where a gap overlaps a selected question's topic, take a different angle, e.g. anchor the scenario in the candidate's own resume claims, probe how they'd handle a complication or failure rather than the standard approach, or combine the gap with another competency in one situation.
-3. **Mark must-ask questions (★)** — every Mandatory bank question plus all 5 scenario questions. Optional questions are backups to use as time allows.
+   Keep each question's ID and use the bank's wording exactly — don't reword questions to fit the JD's domain or write new questions for these aspects. Domain-specific angles belong in the Rationale column and the scenario questions. If a section's Mandatory questions exceed its allocation, keep the allocation, select the Mandatory questions in bank order, and flag the bank for correction.
+2. **Candidate assessment — generate.** After selecting the bank questions, create **3 scenario-based questions** that verify the gaps, areas needing improvement, and insufficiencies identified in Step 4, calibrated to the met seniority level. They must not repeat or paraphrase any selected bank question — where a gap overlaps a selected question's topic, take a different angle, e.g. build the scenario around a type of work the candidate claims on their resume, probe how they'd handle a complication or failure rather than the standard approach, or combine the gap with another competency in one situation.
 
-Present all 26 questions as one table — bank questions first, then the scenario questions:
+   Keep scenarios generic, because the candidate may not have the client's domain or system knowledge, and the scenarios test analysis skill, not that knowledge. Use a neutral, everyday business setting (e.g. orders, customers, partners), state within the question any rule or term the answer depends on, and don't name a specific domain, system, product, client, or the candidate's employers. Put the link to the JD's domain and the resume-specific evidence in the Rationale column instead.
+3. **Leadership & influence — generate.** Create **2 questions** drawn from the A3 leadership competencies in the reference (e.g. Team Management, Mentoring, Developing Others, Leadership, Driving Change and Innovation, BA approach and SDLC improvement): one on how the candidate has influenced ways of working or BA processes beyond their own tasks, and one on leading a team or coaching other BAs. Every candidate gets both, whatever their met seniority:
+   - **Below A2 or A2:** look for A3 potential — signs they have already acted beyond their level.
+   - **A3:** confirm the depth and impact of their leadership and influence.
+
+   The same rules as the scenario questions apply: don't repeat or paraphrase a selected bank question, and keep them generic. They may ask about the candidate's past experience ("Tell me about a time…") as well as hypothetical situations.
+4. **Mark must-ask questions (★)** — every Mandatory bank question plus all 5 generated questions. Optional questions are backups to use as time allows.
+
+Present all 29 questions as one table — bank questions first, then the scenario questions, then the leadership questions:
 
 | ★ | Aspect | ID | Type | Question | Strong Answer Includes | Rationale |
 |---|---|---|---|---|---|---|
 
 - **Bank questions:** Type is "Mandatory" or "Optional"; Strong Answer Includes is copied from the bank, including any **Perspective** note.
-- **Scenario questions:** Aspect is "Candidate assessment", IDs run SC-01 to SC-05, and Type is "Scenario". Rationale names the gap or area to verify and the assessment evidence behind it.
+- **Scenario questions:** Aspect is "Candidate assessment", IDs run SC-01 to SC-03, and Type is "Scenario". Rationale names the gap or area to verify and the assessment evidence behind it.
+- **Leadership questions:** Aspect is "Leadership & influence", IDs are LI-01 and LI-02, and Type is "Leadership". Rationale names the A3 competency probed and the resume evidence, or lack of it, behind the question.
 
 ## Step 7 — Interview notices
 
@@ -106,7 +113,7 @@ Ask the user to confirm the question table and interview notices, or to request 
 
 Once confirmed, write the pack to `references/interview-candidate-data/interview-question-<candidate-name>.md` (candidate name in lowercase, hyphenated). If the file already exists, ask before overwriting it. The file contains:
 
-1. A short header: candidate, position, role positioning, met seniority, interview scope (including any aspects covered by another interviewer), and question allocation.
+1. A short header: candidate, position, role positioning, met seniority, interview scope, and question allocation.
 2. The Step 6 question table.
 3. The Step 7 interview notices.
 
