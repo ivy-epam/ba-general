@@ -6,6 +6,33 @@ description: Seniority competency definitions for Business Analysis (A2–A3 onl
 
 Primary skill: Business Analysis. Levels in scope: **A2** Business Analyst · **A3** Senior Business Analyst (A1 and A4 are out of scope for candidate interviews and are not included).
 
+## A2 vs A3 — Interview Calibration Summary
+
+Derived from the General Requirements and Skill Requirements sections below; last generated 2026-10-20. Regenerate when those sections change.
+
+| Area | A2 Business Analyst — what to listen for | A3 Senior Business Analyst — what to listen for |
+|---|---|---|
+| **Experience & scope** | Works at **feature** level within an established BA approach; ~1 year of E2E feature delivery (analysis, data model, documentation, approval, testing support); 6 months running elicitation; decomposes feature scope and estimates own tasks | Works at **component** level; 3+ years overall, incl. 1 year E2E component delivery; 2+ delivery projects; sets up the BA approach for the project; tracks delivery from business value to production use; improves the SDLC approach |
+| **Elicitation** | Prepares, runs and captures sessions; selects techniques for the scope (hands-on with 2–3); validates information and obtains approvals | Leads discovery-type elicitation and adapts format to project/client goals; facilitates group events (workshops, focus groups, brainstorming); spots inconsistencies across requirements |
+| **Stakeholders & client relations** | Builds credibility and trust; listens with empathy; summarises and rephrases; creates RACI/stakeholder artifacts; follows the communication plan | Recommends a stakeholder-management approach; designs the communication plan (geography, culture, formality, cadence); adapts style per audience; simplifies complex ideas; says no with valid reasoning; guides the client on solutions |
+| **BA approach & planning** | Explains the approach to stakeholders; understands the problem, assumptions and constraints; plans own work (under supervision); follows defined roles and change process | Chooses the approach and level of formality; creates or adapts templates; defines BA roles and responsibilities; defines change management, verification/validation and approval processes; partners with PM on plans and timelines |
+| **Requirements, change & traceability** | Creates LLD (use cases/user stories, GUI requirements, basic diagrams) without supervision; assesses impact of changes; uses business rules, functional decomposition, data modelling, backlog, acceptance criteria; keeps traceability up to date | Creates HLD, BPMN/UML diagrams, risk/impact analysis and risk log; contributes to DoR/DoD and issue workflow; proposes a change-management approach and communicates change impact; traces requirements backward and forward; designs how BA information is stored and reused |
+| **Prioritisation, scope & estimation** | Uses MoSCoW/ranking; identifies decision-makers for approval; decomposes backlog and business requirements into FRs/NFRs; estimates own tasks (3-point, T-shirt, planning poker) | Builds stakeholder consensus on priorities (value, effort, dependencies, risk, user satisfaction); sets up and justifies the approval process; proposes MVP scope; supports phase planning; WBS/expert-judgment estimates, incl. high-level dev effort |
+| **Domain & solution** | Experience in one domain segment; researches new domains; understands client needs and the proposed solution; aware of solution assessment | Knows one domain well enough to find gaps and bottlenecks; considers regulatory and risk factors; explains why a change is needed; contributes to solution definition; prioritises defects; proposes success criteria |
+| **SDLC & IT knowledge** | Solid in one methodology; understands Agile vs non-Agile; adjusts BA processes to the SDLC; basics of client-server, databases, UX/UI | Solid in two or more methodologies; establishes a BA approach suited to the methodology; understands architecture styles (microservices, monolith, cloud), relational/non-relational databases, CI/CD; may support pre-sales |
+| **Quality & risk** | Knows BA metrics; identifies and communicates risks to management | Measures BA work against KPIs; communicates risk impact of changes with mitigation options |
+| **GenAI** | Uses approved GenAI tools with pre-built or lightly customised prompts to draft and inspect artifacts; cross-checks with multiple models; notes AI assumptions/limits; identifies simple use cases | Designs prompt strategies, reusable prompt packs and guardrails; defines evals/quality gates; integrates GenAI across BA workflows with measurable value; coaches the team and drives adoption |
+| **Leadership & people** | Team management not applicable; ownership under supervision; recognises conflict and escalates when needed; adapts within a pre-structured framework | Steps in to lead teams; onboards/trains/manages at least 1 other BA; mentors and develops others; drives change and challenges the status quo; resolves conflict without escalation; facilitates team meetings |
+| **English** | B2 | B2+ |
+
+**Signals in interview answers**
+
+- **Level of work:** A2 talks about a feature they delivered; A3 talks about a component or whole initiative and how its BA work was set up.
+- **Follow vs define:** A2 follows or proposes tweaks to an existing approach, template or process; A3 explains why they chose or designed it.
+- **Own vs others' work:** A2 plans and estimates their own tasks; A3 describes shaping other people's work — PM plans, other BAs, team ways of working.
+- **Stakeholders:** A2 builds trust and escalates conflict; A3 adapts to each audience, pushes back with reasoning, and builds consensus.
+- **GenAI:** A2 uses AI to draft and check; A3 builds reusable assets and governance for the team.
+
 ## General Requirements
 
 ### Professional Experience

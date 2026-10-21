@@ -30,6 +30,7 @@ Rules for how skills in `.claude/skills/` and templates in `templates/` are writ
 - **Placement:** Document Control & Revision History is always the last section of a document.
 - **Create:** set version `1.0` with a first Revision History row — "Initial draft", plus the trigger/reason where the template has a column for it (e.g. "Created from BRD").
 - **Update:** bump the version — minor (1.0 → 1.1) for small changes, major (1.0 → 2.0) for a significant scope change; ask the user if unclear — and add a Revision History row with the date, a plain-language description of what changed, and the trigger/reason where the template has a column for it.
+- **One row per day:** if the latest Revision History row has today's date, don't add a row or bump the version — fold the new changes into that row's description (still concise) and keep its version, unless today's change is major, in which case raise that row's version to the next major. Only a change on a different date gets a new row and a version bump. Skill steps that say "bump the version" follow this rule.
 - **Keep Revision History rows concise:** one line, about 25 words or fewer, listing only the key changes as short phrases separated by semicolons. Leave out rationale, definitions, and detail that already lives in the document body. Example: "Interview follow-up: two entities added; key attribute confirmed; one rule removed".
 
 ## Summaries

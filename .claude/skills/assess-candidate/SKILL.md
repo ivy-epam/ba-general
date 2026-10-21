@@ -16,7 +16,7 @@ Assesses an analyst candidate's fit for a position from their resume and, option
 
 E.g. "Business + System analyst, plus Scrum Master" or "Business + Data analyst, no plus responsibility." A candidate is assessed against the positioning the role actually needs.
 
-**Reference:** `references/seniority-competency-definition-business-analysis.md` (in the project-root `references/` folder, as are all paths in this skill) — the analysis seniority baseline. Only **A2** (Business Analyst) and **A3** (Senior Business Analyst) are in scope. Always read the current file rather than applying competencies from memory, in case it has been edited. Focus-specific skills (system, data) and the plus responsibility aren't covered by it; those come from Step 1.
+**Reference:** `references/seniority-competency-definition-business-analysis.md` (in the project-root `references/` folder, as are all paths in this skill) — the analysis seniority baseline. Only **A2** (Business Analyst) and **A3** (Senior Business Analyst) are in scope. Always read the current file rather than applying competencies from memory, in case it has been edited. The file opens with a pre-generated **A2 vs A3 — Interview Calibration Summary** used by Step 3; the detailed sections below it remain the source for Step 4's evidence mapping. Focus-specific skills (system, data) and the plus responsibility aren't covered by it; those come from Step 1.
 
 ## Step 1 — Clarify role positioning (hard stop)
 
@@ -35,12 +35,13 @@ For each System/Data focus and the plus responsibility, list the expected skills
 
 ## Step 3 — Calibrate seniority expectations
 
-1. Read the reference file, using both sections (General Requirements and Skill Requirements) to understand expectations for A2 and A3.
-2. Summarize what distinguishes A2 from A3 in practical interview terms.
-3. Add the confirmed focus-specific skills and plus responsibility from Step 1 alongside the seniority baseline.
-4. Include this baseline in the output and continue straight to the assessment — no confirmation needed.
+1. Read the **A2 vs A3 — Interview Calibration Summary** section of the reference file. Don't re-derive it from the detailed sections.
+2. Present it as the seniority baseline, with the confirmed focus-specific skills and plus responsibility from Step 1 added alongside it.
+3. Continue straight to the assessment — no confirmation needed.
 
-If the reference file can't be read or is empty, stop and tell the user: "The seniority reference file cannot be found."
+If the reference file can't be read or is empty, stop and tell the user: "The seniority reference file cannot be found." If the summary section is missing, stop and tell the user: "The seniority calibration summary is missing from the reference file — regenerate it before assessing."
+
+The summary is regenerated manually when the competency definitions change; this skill never rewrites it.
 
 ## Step 4 — Assess the candidate
 
@@ -80,7 +81,7 @@ Read `references/interview-question-bank.md` — always the current file, not fr
 
 Fixed counts: Agile 3, Soft skills 2, AI 2, plus responsibility 3 (when there is one), scenario 3, leadership 2. Analysis focus gets the rest; with two focuses, the primary gets more.
 1. **Bank aspects — select.** Use only the sections for the confirmed focus(es) and plus responsibility. For each aspect:
-   - **Mandatory** questions are always selected and count toward its allocation.
+   - **Mandatory** questions are always selected and count toward its allocation. **Mandatory (A3)** questions are treated as Mandatory when the met seniority from Step 4 is A3, and as Optional otherwise.
    - Fill the remaining places with **Optional** questions that best fit the focuses confirmed in Step 5, each with a one-line rationale tied to this candidate or JD (e.g. "probes the Partial rating on stakeholder management", "JD stresses regulatory change").
 
    Keep each question's ID and use the bank's wording exactly — don't reword questions to fit the JD's domain or write new questions for these aspects. Domain-specific angles belong in the Rationale column and the scenario questions. If a section's Mandatory questions exceed its allocation, keep the allocation, select the Mandatory questions in bank order, and flag the bank for correction.
@@ -99,7 +100,7 @@ Present all 29 questions as one table — bank questions first, then the scenari
 | ★ | Aspect | ID | Type | Question | Strong Answer Includes | Rationale |
 |---|---|---|---|---|---|---|
 
-- **Bank questions:** Type is "Mandatory" or "Optional"; Strong Answer Includes is copied from the bank, including any **Perspective** note.
+- **Bank questions:** Type is "Mandatory" or "Optional", as resolved for this candidate (a Mandatory (A3) question shows as "Mandatory" for an A3 candidate and "Optional" otherwise); Strong Answer Includes is copied from the bank, including any **Perspective** note.
 - **Scenario questions:** Aspect is "Candidate assessment", IDs run SC-01 to SC-03, and Type is "Scenario". Rationale names the gap or area to verify and the assessment evidence behind it.
 - **Leadership questions:** Aspect is "Leadership & influence", IDs are LI-01 and LI-02, and Type is "Leadership". Rationale names the A3 competency probed and the resume evidence, or lack of it, behind the question.
 

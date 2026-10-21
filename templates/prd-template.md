@@ -49,6 +49,8 @@ used_by_skill: generate-prd
 
 ## 9. Glossary / Appendix
 
+Domain analysis: {{outputs/<client>-<project-code>-domain-analysis.md, or "none"}}
+
 {{Terms, definitions, or supporting reference material.}}
 
 ## 10. Assumptions, Constraints & Dependencies

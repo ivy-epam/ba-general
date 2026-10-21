@@ -1,35 +1,44 @@
 ---
 template: domain-analysis
 title: Project Domain Analysis Template
-version: 3.0
-last_updated: 2026-10-19
+version: 3.1
+last_updated: 2026-10-21
 owner: ivy_li@epam.com
 used_by_skill: generate-domain-analysis
 ---
 
-# {{Client}} {{Product}} ({{scope, e.g. region}}) — {{Domain}}
+# {{Client}} {{Product}} ({{scope, e.g. region}}) — {{Sector, qualified by domain where needed}}
 
-*Moves from broad to narrow: the industry domain, then this product's scope and data model (entities, keys, relationships, rules), then the systems it works with, then the decisions, assumptions, and open questions behind it. Research-led and validated with the stakeholder; updated as understanding deepens.*
+*Moves from broad to narrow: the sector of the domain the product sits in, then this product's scope and data model (entities, keys, relationships, rules), then the systems it works with, then the decisions, assumptions, and open questions behind it. Research-led and validated with the stakeholder; updated as understanding deepens.*
 
 | | |
 |---|---|
-| **Domain** | {{industry / business domain}} |
+| **Domain** | {{parent business domain, e.g. Banking}} |
+| **Sector** | {{specific sector within the domain, e.g. Wealth management / retail investment}} |
 | **Client** | {{client name, or "Not disclosed"}} |
+| **Project Code** | {{project code}} — PRD: {{outputs/<project-code>-PRD.md, or "not yet created"}} |
 | **Product** | {{product (short name)}} — {{one-line description}}. In scope: {{boundaries, e.g. deployment, region, product line}}. |
 
-## Part 1 — Domain
+## Part 1 — Sector
 
-*Specific to the industry, not this project — reusable for other clients in the same domain.*
+*Specific to the {{sector}} sector of {{domain}}, not this project — reusable for other clients in the same sector.*
 
-### 1. Domain Primer
+### 1. Sector Primer
 
-*Plain-language explainer for readers new to the domain: the core concepts, how the industry typically models them, and where real implementations commonly differ.*
+*Plain-language explainer for readers new to the sector: an overview of the sector, its core concepts, how the sector typically models them, and where real implementations commonly differ.*
+
+#### Sector overview
+
+- **Scope:** {{what the sector covers within its domain; adjacent sectors}} [R#]
+- **Participants:** {{the businesses involved and their roles}} [R#]
+- **Core transactions:** {{who exchanges what with whom; how value and money flow}} [R#]
 
 #### Core concepts
 
-- **{{concept}}.** {{explanation}} [R#]
+- **{{group, e.g. Sector & participants}}**
+  - **{{concept}}.** {{explanation}} [R#]
 
-#### How the industry typically models this
+#### How the sector typically models this
 
 - **{{summary}}.** {{explanation}} [R#]
 
@@ -51,16 +60,28 @@ used_by_skill: generate-domain-analysis
 | Journeys & Use Cases | {{each in-scope journey with its high-level use cases, one journey per line, separated by `<br>` — e.g. **Account Opening:** apply for an account; verify identity<br>**Claims:** submit a claim; track its status}} |
 | Inputs | {{what enters the process — triggers, requests, data}} |
 | Outputs / Ultimate Outcomes | {{what the process produces or achieves}} |
-| Out of Scope | {{...}} |
+| Out of Scope | {{product boundary — capabilities, processes, and systems outside the product}} |
 | Constraints | {{regulatory, regional, product-line boundaries}} |
 
 *Which system supplies each input, data ownership, and data flows are in System Landscape.*
 
 ### 3. Entities Inventory
 
+#### Tier 1 — Entities
+
+*Independent entities with their own identity and lifecycle.*
+
 | ID | Entity Name | Description | Source Type | Status |
 |---|---|---|---|---|
 | E01 | {{...}} | {{...}} | {{Doc: <file §> / Interview / Research [R#]}} | {{Confirmed / Proposed}} |
+
+#### Tier 2 — Sub-entities
+
+*Entities with their own identity and lifecycle that cannot exist without their parent.*
+
+| ID | Sub-entity Name | Parent Entity | Description | Source Type | Status |
+|---|---|---|---|---|---|
+| E0{{n}}.1 | {{...}} | {{E0n parent entity}} | {{...}} | {{Doc: <file §> / Interview / Research [R#]}} | {{Confirmed / Proposed}} |
 
 ### 4. Domain Model Diagram
 
