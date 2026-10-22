@@ -1,8 +1,8 @@
 ---
 template: rbac
 title: Role-Based Access Control (RBAC) Matrix Template
-version: 1.0
-last_updated: 2026-09-28
+version: 1.1
+last_updated: 2026-10-22
 owner: ivy_li@epam.com
 used_by_skill: generate-rbac
 ---
@@ -15,7 +15,7 @@ used_by_skill: generate-rbac
 
 | Role Name | Description | Source(s) |
 |---|---|---|
-| {{Role}} | {{description}} | {{e.g., "PRD ABC-123 → Target Users"}} |
+| {{Role}} | {{description}} | {{e.g., "PRD ABC-123 → Actors & End Users"}} |
 
 ## 2. Features / Resources Inventory
 
@@ -39,7 +39,6 @@ used_by_skill: generate-rbac
 
 | Field | Value |
 |---|---|
-| Author | {{author}} |
 | Status | Draft / In Review / Approved |
 
 **Revision History**

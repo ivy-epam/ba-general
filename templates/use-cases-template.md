@@ -1,13 +1,15 @@
 ---
 template: use-cases
 title: Use Case Specifications Template
-version: 1.0
-last_updated: 2026-09-28
+version: 1.1
+last_updated: 2026-10-22
 owner: ivy_li@epam.com
 used_by_skill: generate-use-cases
 ---
 
 # {{Feature Name}} — Use Case Specifications
+
+**Feature Analysis:** {{link/path to outputs/features/<feature>/<feature>-feature-analysis.md, or "None"}}
 
 ## 1. Use Case Summary
 
@@ -43,7 +45,7 @@ used_by_skill: generate-use-cases
 
 - **E1 (at step {{n}}):** {{error condition}} → {{system/actor response}}
 
-**Business Rules Referenced:** {{Rule name(s) from the linked Feature Analysis's To-Be: Business Rules table, or "None"}}
+**Business Rules Referenced:** {{Rule name(s) from the linked Feature Analysis's Business Rules table, or "None"}}
 
 **Related Use Cases:** {{"Includes UC-0X" / "Extends UC-0X" / "None"}}
 
@@ -55,9 +57,6 @@ used_by_skill: generate-use-cases
 
 | Field | Value |
 |---|---|
-| Feature Name | {{feature name}} |
-| Related Feature Analysis | {{link/path to outputs/feature-<feature>/<feature>-feature-analysis.md, or "None"}} |
-| Author | {{author}} |
 | Status | Draft / In Review / Approved |
 
 **Revision History**

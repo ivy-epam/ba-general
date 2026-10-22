@@ -25,7 +25,7 @@
   - *Banks and wealth managers* serve the customer, give advice where offered, and sell investment products.
   - *Customers* are individuals, usually grouped by how much they have to invest [R18].
   - *Product makers* create what is sold — asset managers make funds, issuers create structured products, and the bank's own dealing desk quotes prices for currencies and gold [R1][R15].
-  - *Custodians* keep customers' investments safe and record who owns what [R20].
+  - *Custodians* — usually a department of the bank or a specialist firm it appoints — hold customers' securities, often pooled in one account in the bank's name, with the bank's records showing what each customer owns [R20][R26].
   - *Regulators* set the rules for selling investments to the public [R9][R21].
 - **Core transactions:**
   - The customer moves money from a deposit account into an investment.
@@ -40,12 +40,12 @@
   - **How the bank earns.** Banks earn fees on the value of what customers invest, commissions on each trade, and a *spread* — the gap between the price at which they buy and the price at which they sell [R1][R19].
 - **What is sold**
   - **Deposit or investment.** A deposit is protected up to an insured limit if the bank fails. An investment can earn more, but its value can fall, and deposit insurance doesn't cover it [R16]. *In Taiwan:* deposits in New Taiwan dollars (TWD) and foreign currency are insured up to NT$3 million, paid out in TWD; gold accounts are investments and aren't insured [R3][R24][R25].
-  - **Simple to complex products.** Products range from simple ones, such as foreign currency and funds, to complex ones, such as *structured products* whose return is linked to something else. A dual-currency investment, for example, pays higher interest but may repay the money in another currency at a loss [R5][R6]. Because complex products are harder to understand, regulators require extra checks and clearer disclosure before selling them [R22].
+  - **Simple to complex products.** Products range from simple ones, such as foreign currency and funds, to complex ones, such as *structured products* whose return is linked to something else. One example is a *dual-currency investment* (also sold as a *currency-linked investment*): a short-term investment that pays more interest than a deposit, but on a set date the bank may repay it in a second currency at a pre-agreed rate, which can mean a loss larger than the extra interest [R4][R5][R6]. Because complex products are harder to understand, regulators require extra checks and clearer disclosure before selling them [R22].
 - **From order to holding**
   - **Buy and sell prices.** For currencies and gold, the bank quotes two prices: what it pays when the customer sells, and what it charges when the customer buys. The difference is the bank's spread, already built into the quote [R1][R2].
   - **Orders.** A *market order* is carried out straight away at the current quoted price. A *limit order* is carried out only if the price reaches the customer's target within a chosen period, and isn't guaranteed to happen [R1][R2][R11].
   - **Settlement and holdings.** After a trade, money and the investment move between the customer's accounts — this is *settlement*. What the customer then owns is a *holding*, whose value moves with the market, giving a profit or loss against what was paid [R2][R3].
-  - **Safekeeping.** Investments a bank holds for customers are kept separate from the bank's own assets and recorded as belonging to the customer, so the bank's creditors can't claim them [R20].
+  - **Safekeeping.** Securities such as funds and bonds are held in *custody*: often pooled in one account in the bank's name, but legally the customers' and kept apart from the bank's own assets, so the bank's creditors can't claim them [R20][R26]. Currency balances and structured deposits such as dual-currency investments are different — they are amounts the bank owes the customer, so the customer relies on the bank's own soundness [R27].
 - **Protecting investors**
   - **Suitability and disclosure.** Before selling an investment, the bank checks the customer's risk appetite, knowledge, and experience against the product's risk (*know your customer, know your product*), and explains the risks in writing [R21][R22][R23]. *In Taiwan:* banks must carry out these checks, and non-professional customers can buy only approved types of structured product [R9][R10].
   - **Currency reporting.** Some markets track large conversions between the home currency and foreign currency. *In Taiwan:* conversions between TWD and foreign currency of NT$500,000 or more must be declared to the central bank through the bank, and each individual has an annual limit of USD 5 million before extra checks apply [R7][R8].
@@ -98,7 +98,7 @@
 |---|---|---|---|---|
 | E01 | Customer | A DBS Taiwan wealth or retail customer who invests through Product-X | Interview; Research [R2][R9] | Confirmed |
 | E02 | Account | A customer account debited or credited by orders — TWD deposit account, foreign currency current account, or gold account | Interview; Research [R2][R3] | Confirmed |
-| E03 | Instrument | A tradeable investment: an FX currency pair, a CLI, or gold | Interview; Research [R1][R3][R4] | Confirmed |
+| E03 | Instrument | A tradeable investment: an FX currency pair, a CLI (Currency Linked Investment — DBS's name for a dual-currency investment), or gold | Interview; Research [R1][R3][R4] | Confirmed |
 | E04 | Order | A customer instruction to buy or sell an instrument, market or limit, tracked through its lifecycle including execution | Interview; Research [R1][R2] | Confirmed |
 
 #### Tier 2 — Sub-entities
@@ -166,7 +166,7 @@ classDiagram
 | Parent Entity | Subtype Entity | Distinguishing Rule | Source Type | Status |
 |---|---|---|---|---|
 | Instrument | FX Currency Pair | Spot conversion between two currencies, quoted as a buy/sell rate | Interview; Research [R1][R2] | Confirmed |
-| Instrument | CLI | Dual-currency investment with a strike rate, term (tenor), fixing and maturity dates, and alternate currency; whether each deal is its own instrument is open (OQ 5) | Interview; Research [R4][R5] | Confirmed |
+| Instrument | CLI | Currency Linked Investment, DBS's name for a dual-currency investment (see Sector Primer), with a strike rate, term (tenor), fixing and maturity dates, and alternate currency; whether each deal is its own instrument is open (OQ 5) | Interview; Research [R4][R5] | Confirmed |
 | Instrument | Gold | Gold held as a balance in a gold account rather than as specific bars (unallocated), quoted per unit in a pricing currency | Interview; Research [R2][R3] | Confirmed |
 
 ### 6. Attributes
@@ -297,6 +297,8 @@ classDiagram
   *Confirm:* DBS business — proposed from research and the named systems.
 - **A10 — System-of-record assignments and all data flows are as shown in System Landscape.**
   *Confirm:* DBS technology team — systems named by the stakeholder; ownership and flows inferred from their usual roles.
+- **A11 — An unallocated gold balance is an amount DBS owes the customer, not gold held in custody for them, so the customer bears DBS's credit risk.**
+  *Confirm:* DBS business — inferred from "unallocated" and from the gold account terms [R3]; no source states it directly.
 
 ### 11. Open Questions
 
@@ -342,6 +344,8 @@ classDiagram
 - **R23** [MAS — Notice SFA 04-N12 on the sale of investment products](https://www.mas.gov.sg/regulation/notices/notice-sfa-04-n12)
 - **R24** [Central Deposit Insurance Corporation (Taiwan) — 存款保險常見問答 (deposit insurance FAQ)](https://www.cdic.gov.tw/main_deposit/faq.aspx?uid=59&pid=59)
 - **R25** [UOB Taiwan — Depositor rights](https://www.uobgroup.com/tw/disclosure/depositor-rights.page)
+- **R26** [Barclays — How we hold your assets and keep them safe](https://barclays.co.uk/smart-investor/investments/how-we-hold-your-assets-and-keep-them-safe)
+- **R27** [DBS Taiwan — CIIP/DCI 產品說明書暨風險預告書 (dual currency investment product and risk statement)](https://www.dbs.com.tw/iwov-resources/pdf/legal%20disclaimers%20and%20announcements/01_personal%20finance/05_investments/DCI%20risk.pdf)
 
 ### 13. Document Control & Revision History
 
@@ -355,3 +359,4 @@ classDiagram
 |---|---|---|
 | 1.0 | 2026-10-20 | Initial research-led domain analysis for the Taiwan retail investment journey (FX, CLI, gold); federation defined; Watchlist and Holding as tier-2 sub-entities |
 | 2.0 | 2026-10-21 | Keyed to wmtaiwan; file renamed; Part 1 rebuilt as sector, re-researched, in plain language; review fixes; OQ 9–10 added; sources upgraded |
+| 2.1 | 2026-10-22 | Custody clarified: custodians pooled, securities only; bank-owed products distinguished; A11 added for gold; dual-currency investment explained and linked to CLI |

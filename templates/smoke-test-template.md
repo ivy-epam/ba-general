@@ -1,8 +1,8 @@
 ---
 template: smoke-test
 title: Smoke Test Suite Template
-version: 1.0
-last_updated: 2026-09-28
+version: 1.1
+last_updated: 2026-10-22
 owner: ivy_li@epam.com
 used_by_skill: generate-smoke-test
 ---
@@ -27,7 +27,7 @@ used_by_skill: generate-smoke-test
 
 | UC ID | Use Case | Compliance | Frequency | User Volume | Business Value | Score | Priority | Priority Basis | Rationale |
 |---|---|---|---|---|---|---|---|---|---|
-| UC-01 | {{...}} | {{0/1}} | {{0/1}} | {{0/1}} | {{0/1/2}} | {{S, or "Gate"}} | {{P0/P1/P2}} | {{Matrix / func-test}} | {{one line per dimension score}} |
+| UC-01 | {{...}} | {{0/1}} | {{0/1}} | {{0/1}} | {{0/1/2}} | {{calculation and result, e.g. "0.25×1 + 0.55×1 + 0.20×(2/2) = 1.00", or "Gate"}} | {{P0/P1/P2}} | {{Matrix / func-test}} | {{one line per dimension score}} |
 
 #### {{UC-0X}} — {{Use Case Name}} ({{P0/P1}})
 

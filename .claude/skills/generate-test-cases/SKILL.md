@@ -7,17 +7,17 @@ description: Formalize a single story's existing Gherkin acceptance criteria (fr
 
 Formalizes a single story's existing Gherkin Acceptance Criteria (written by `generate-user-stories`) into a classified, prioritized, execution-ordered functional test suite. This skill does not re-derive test content independently from the source Use Case's raw flows — the ACs already written on the story are the primary source; this skill's job is classification, scenario grouping, priority, traceability discipline, and execution ordering on top of them.
 
-**Scope is one story, not a whole use case.** Each story file gets its own func-test file. Known tradeoff: this skill's execution-order optimization (Step 5) reasons only within this one story's own scenarios — it does not reuse test data or sequence across sibling stories of the same use case, since those may live in different files (and different sprint buckets) entirely.
+**Scope is one story, not a whole use case.** Each story file gets its own func-test file. Known tradeoff: this skill's execution-order optimization (Step 5) reasons only within this one story's own scenarios — it does not reuse test data or sequence across sibling stories of the same use case, since those live in different files entirely.
 
-**Adapted from the `func-test` skill pattern** (scenario groups, priority levels, traceability rules, execution-order optimization), but without a separate living checklist file — coverage analysis and quality checks are folded into inline self-verification steps here, consistent with every other skill in this project (one output artifact, no helper files).
+**Adapted from the `func-test` skill pattern** (scenario groups, priority levels, traceability rules, execution-order optimization), but without a separate living checklist file — quality checks are folded into an inline self-check step here, consistent with every other skill in this project (one output artifact, no helper files).
 
 The template lives at `templates/func-test-template.md` in this project.
 
-The output is written to `outputs/<bucket>/US-<use-case-name>/<use-case-name>-func-test-0X.md` — right next to its source story file, in whichever sprint bucket that story currently lives in. Named `-func-test` specifically (not a generic `-tests`) since other test types (e.g. smoke tests) are tracked separately.
+The output is written to `outputs/features/<feature>/user-stories/<UC-ID>/<UC-ID>-<short-title>-func-test.md` — right next to its source story file, with the story's filename plus `-func-test`. Named `-func-test` specifically (not a generic `-tests`) since other test types (e.g. smoke tests) are tracked separately.
 
 ## Step 1 — Analyze & classify
 
-1. Locate the source story file by globbing `outputs/*/US-<use-case-name>/<use-case-name>-US-0X.md` across all three sprint buckets. Read its "As a/I want/so that," Covers Flow(s), Gherkin Acceptance Criteria, Related NFRs, and Feature field (needed to locate the feature's Feature Analysis document for Boundary-case sourcing below). Note which bucket it's currently in — the func-test file is written alongside it, in the same bucket.
+1. Locate the source story file in `outputs/features/<feature>/user-stories/<UC-ID>/`. Read its "As a/I want/so that," Covers Flow(s), Gherkin Acceptance Criteria, and Related NFRs. The feature is the `<feature>` folder the story sits in (needed to locate the feature's Feature Analysis document for Boundary-case sourcing below).
 2. Classify the story as one of:
    - **`UI-related`** — change limited to presentation/layout with no logic or data impact; test focus is visual verification, layout, and user interaction.
    - **`Functionality-related`** — affects behavior/logic of a specific function, no data cleanup/migration risk; test focus is functional correctness, edge cases, and error handling.
@@ -34,7 +34,7 @@ Present the classification, its reasoning, and any ambiguities/assumptions from 
    - Happy-path scenario (from the Basic Flow) → **Positive**.
    - Valid-variation scenarios (from Alternate Flows) → **Alternative**.
    - Invalid-input/error scenarios (from Exception Flows) → **Negative**.
-   - **Boundary** cases are proposed only where implied by a specific NFR (read `outputs/feature-<feature>/<feature>-feature-analysis.md`'s Non-Functional Requirements section, using the feature name noted in Step 1) or an explicit limit stated in an AC or business rule — cite the source (NFR ID or AC). If no source implies a boundary case for a given input/limit, do not invent one; note the gap in Open Questions instead.
+   - **Boundary** cases are proposed only where implied by a specific NFR (read `outputs/features/<feature>/<feature>-feature-analysis.md`'s Non-Functional Requirements section, using the feature name noted in Step 1) or an explicit limit stated in an AC or business rule — cite the source (NFR ID or AC). If no source implies a boundary case for a given input/limit, do not invent one; note the gap in Open Questions instead.
 2. **Assign priority** to each test case:
    - `P0` — critical path or blocker AC.
    - `P1` — important, non-blocker behavior.
@@ -59,16 +59,12 @@ Present the classification, its reasoning, and any ambiguities/assumptions from 
 - When an AC defines multiple mutually-exclusive terminal outcomes for the same entity (e.g., approve vs. deny vs. cancel vs. expire on one request), order them from least state-mutating/cheapest-to-reset to most: an outcome that grants/creates a persistent artifact (e.g., an approval granting access) is sequenced last among the terminal cases, since it needs an explicit rollback before the entry is reusable; outcomes that leave no artifact (deny, cancel, expire) run first.
 - If reusing one test-data record across terminal-outcome cases would force a rollback step not stated in any AC, generate a fresh Given/entry per case instead and note it, rather than chaining through a state-mutating outcome.
 
-## Step 6 — Inline coverage analysis
+## Step 6 — Inline quality self-check
 
-Validate coverage against: happy path and alternative flows, all of this story's acceptance criteria, boundary conditions, invalid input handling, error conditions, data validation, permission/authorization (cross-checked against `outputs/rbac.md` for this story's actor — a role-based access denial scenario should exist if RBAC restricts something relevant here), and state transitions. Record the result in the Coverage Notes section — no separate checklist file; this is a step within this run, not a persisted artifact.
+Before finalizing, confirm: every test case has a traceable source reference; no Given/When/Then contains fabricated/untraceable content; every test case has a priority; execution order has been applied. If something fails, revise internally rather than presenting an incomplete draft.
 
-## Step 7 — Inline quality self-check
+## Step 7 — Draft and write the output
 
-Before finalizing, confirm: every test case has a traceable source reference; no Given/When/Then contains fabricated/untraceable content; every test case has a priority; execution order has been applied; Step 6's coverage analysis is complete. If something fails, revise internally rather than presenting an incomplete draft.
-
-## Step 8 — Draft and write the output
-
-1. Draft the document following `templates/func-test-template.md` exactly — Classification & Scope, Assumptions & Clarifications, Test Case Summary (counts per scenario group × priority), Test Cases (in execution order), Coverage Notes, Open Questions.
-2. Write to `outputs/<bucket>/US-<use-case-name>/<use-case-name>-func-test-0X.md`, using the same `<bucket>` and story number `0X` as the source story file.
+1. Draft the document following `templates/func-test-template.md` exactly — Classification & Scope, Assumptions & Clarifications, Test Case Summary (counts per scenario group × priority), Test Cases (in execution order), Open Questions.
+2. Write to `outputs/features/<feature>/user-stories/<UC-ID>/<UC-ID>-<short-title>-func-test.md`, using the same `<UC-ID>` and `<short-title>` as the source story file.
 3. **Summarize for the user**, also covering classification, test case counts per scenario group/priority, and what's traceable vs. flagged as an assumption.

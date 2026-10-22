@@ -148,9 +148,9 @@ Ask what changed: new journeys or scope, new or changed systems or data flows, a
 
 | Domain analysis | PRD |
 |---|---|
-| Scope & Context — End Users / Personnel | Target Users / Personas |
-| Scope & Context — Journeys & Use Cases | Key Features / Capabilities Overview |
-| Scope & Context — Out of Scope (product boundary) | Scope — Out of scope |
+| Scope & Context — End Users / Personnel | Actors & End Users |
+| Scope & Context — Journeys & Use Cases | Product Scope & Key Features — key features |
+| Scope & Context — Out of Scope (product boundary) | Product Scope & Key Features — Out of scope |
 | Scope & Context — Constraints | Assumptions, Constraints & Dependencies — Constraints |
 | System Landscape — Systems | Assumptions, Constraints & Dependencies — Dependencies |
 | Entity names (Entities Inventory) | Glossary terms |

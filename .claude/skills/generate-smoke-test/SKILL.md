@@ -38,7 +38,7 @@ Tell the user which mode applies before starting scope analysis.
    - Module list, and the use cases of each module
 2. Work at module level only — features are not assigned to modules in this mode. Supplement the user's answers with sources where available:
    - `outputs/<project-code>-PRD.md` — product context.
-   - `outputs/feature-*/*-feature-analysis.md` — a feature is a flow of use cases, so its To-Be process helps ground each use case's Primary Actor and Primary Flow.
+   - `outputs/features/*/*-feature-analysis.md` — a feature is a flow of use cases, so its To-Be process helps ground each use case's Primary Actor and Primary Flow.
    - `outputs/rbac.md` — authorization-sensitive flows.
 3. **Propose the details the later steps need**, grounded in the user's answers and sources, for the user to confirm or correct at Step 2:
    - Per module: Main Usage Patterns and Module Criticality (Low / Medium / High, with a rationale based on usage frequency, write behaviour — writes that change data or affect other users — and the importance of the data handled).
@@ -73,13 +73,13 @@ Ask the user to review `outputs/smoke-tests/scope-analysis.md`, and present: the
 ### Creation mode
 
 1. Take each module's confirmed use cases from `outputs/smoke-tests/scope-analysis.md` as smoke-test candidates.
-2. Read `references/use-case-prioritisation-matrix.md` and prioritise each use case using its **Use Case Prioritisation Matrix** — always read the current file for the dimensions, weights, and thresholds rather than applying them from memory, in case it has been edited.
+2. Read `references/prioritisation-methods.md` and prioritise each use case using **Part 1 — Test Prioritisation → Custom**. Smoke tests always use Custom; the Implementation methods don't apply here. Always read the current file for the dimensions, weights, and thresholds rather than applying them from memory, in case it has been edited.
 3. Score each dimension with a one-line rationale grounded in the confirmed scope analysis (compliance concerns, usage patterns, module criticality). Where the scope analysis doesn't support a score, ask the user.
-4. Present the filled-in matrix table (per the reference doc's Matrix Table Template), one table per module. `P0`/`P1` use cases become smoke-test candidates; `P2` use cases get no smoke tests.
+4. Present the filled-in matrix table (per the reference doc's Matrix Table Template), one table per module. Show the calculation in the Score column, not just the result (e.g. `0.25×1 + 0.55×0 + 0.20×(2/2) = 0.45`), or "Gate" where Compliance = 1. `P0`/`P1` use cases become smoke-test candidates; `P2` use cases get no smoke tests.
 
 ### Modification mode
 
-1. For each New or Updated use case, glob `outputs/*/US-<use-case-name>/<use-case-name>-func-test-*.md` (produced by `generate-test-cases`) across all three sprint buckets — a use case's stories, and their test files, may be split across buckets — and pull only `P0`/`P1` test cases as smoke-test candidates, ignoring `P2`.
+1. For each New or Updated use case, glob `outputs/features/<feature>/user-stories/<UC-ID>/*-func-test.md` (produced by `generate-test-cases`) — one per story — and pull only `P0`/`P1` test cases as smoke-test candidates, ignoring `P2`.
 2. If a story has no func-test file yet, flag it as a gap: offer to run `generate-test-cases` for it first, or — if the user prefers not to — interview directly for a minimal P0 happy-path candidate, noting the shortcut taken.
 3. Propose each New or Updated use case's priority as the highest priority among its P0/P1 func-test cases (`P2` if it has none). In the priority table, its matrix columns (Compliance → Score) read "—" and Priority Basis is "func-test".
 4. **Re-check the affected module's Unchanged use cases**: if the change makes one less (or more) critical — e.g. a new use case supersedes it as the main path — propose a priority change with rationale.

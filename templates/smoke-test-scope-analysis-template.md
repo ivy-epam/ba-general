@@ -1,8 +1,8 @@
 ---
 template: smoke-test-scope-analysis
 title: Smoke Test Scope Analysis Template
-version: 1.0
-last_updated: 2026-10-16
+version: 1.1
+last_updated: 2026-10-22
 owner: ivy_li@epam.com
 used_by_skill: generate-smoke-test
 ---
@@ -40,7 +40,7 @@ used_by_skill: generate-smoke-test
 |---|---|
 | **Module Name/Code** | {{...}} |
 | **Module Status** | {{New / Updated / Unchanged / Deprecated}} |
-| **Features** | {{features in this module, each linking to `outputs/feature-<feature>/`, or blank}} |
+| **Features** | {{features in this module, each linking to `outputs/features/<feature>/`, or blank}} |
 | **Main Usage Patterns** | {{frequency; read vs. write}} |
 | **Module Criticality** | {{Low / Medium / High}} — {{rationale}} |
 | **Scope Notes** | {{confirmed scope decisions and assumptions, or "None"}} |

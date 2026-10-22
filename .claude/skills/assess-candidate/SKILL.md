@@ -16,7 +16,7 @@ Assesses an analyst candidate's fit for a position from their resume and, option
 
 E.g. "Business + System analyst, plus Scrum Master" or "Business + Data analyst, no plus responsibility." A candidate is assessed against the positioning the role actually needs.
 
-**Reference:** `references/seniority-competency-definition-business-analysis.md` (in the project-root `references/` folder, as are all paths in this skill) — the analysis seniority baseline. Only **A2** (Business Analyst) and **A3** (Senior Business Analyst) are in scope. Always read the current file rather than applying competencies from memory, in case it has been edited. The file opens with a pre-generated **A2 vs A3 — Interview Calibration Summary** used by Step 3; the detailed sections below it remain the source for Step 4's evidence mapping. Focus-specific skills (system, data) and the plus responsibility aren't covered by it; those come from Step 1.
+**Reference:** `references/ba-seniority.md` (in the project-root `references/` folder, as are all paths in this skill) — the analysis seniority baseline. Only **A2** (Business Analyst) and **A3** (Senior Business Analyst) are in scope. Always read the current file rather than applying competencies from memory, in case it has been edited. The file opens with a pre-generated **A2 vs A3 — Interview Calibration Summary** used by Step 3; the detailed sections below it remain the source for Step 4's evidence mapping. Focus-specific skills (system, data) and the plus responsibility aren't covered by it; those come from Step 1.
 
 ## Step 1 — Clarify role positioning (hard stop)
 

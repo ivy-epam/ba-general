@@ -1,13 +1,15 @@
 ---
 template: func-test
 title: Functional Test Cases Template
-version: 2.0
-last_updated: 2026-09-28
+version: 2.1
+last_updated: 2026-10-22
 owner: ivy_li@epam.com
 used_by_skill: generate-test-cases
 ---
 
-# {{Use Case Name}} — {{US-0X}} — Functional Test Cases
+# {{UC-0X}} {{US-0X}}: {{Story Title}} — Functional Test Cases
+
+**Source Story:** {{link/path to outputs/features/<feature>/user-stories/<UC-ID>/<UC-ID>-<short-title>.md}}
 
 *Scoped to a single story, matching its source story file — not the whole use case.*
 
@@ -46,26 +48,18 @@ used_by_skill: generate-test-cases
 
 **Assumptions:** {{"None" or "[ASSUMPTION - not stated in AC] ..."}}
 
-## 5. Coverage Notes
-
-{{Coverage result per category — covered, or not applicable and why.}}
-
-## 6. Open Questions
+## 5. Open Questions
 
 {{Unresolved items.}}
 
-## 7. Document Control & Revision History
+## 6. Document Control & Revision History
 
 | Field | Value |
 |---|---|
-| Story ID | {{US-0X}} |
-| Use Case | {{UC-0X: Name}} |
-| Source Story File | {{link/path to the story's current file, e.g. outputs/current-sprint/US-<use-case-name>/<use-case-name>-US-0X.md}} |
-| Author | {{author}} |
 | Status | Draft / In Review / Approved |
 
 **Revision History**
 
 | Version | Date | Change Description | Trigger / Reason |
 |---|---|---|---|
-| 1.0 | {{date}} | Initial draft | {{e.g., "Derived from <use-case-name>-US-0X.md"}} |
+| 1.0 | {{date}} | Initial draft | {{e.g., "Derived from <UC-ID>-<short-title>.md"}} |

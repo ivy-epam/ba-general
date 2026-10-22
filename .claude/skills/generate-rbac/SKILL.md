@@ -24,9 +24,9 @@ Check whether `outputs/rbac.md` already exists in this project.
 1. **Ask which feature(s)/project code(s) to incorporate.** Can be more than one if catching up on several features at once.
 
 2. **Read the available source documents for each**, where they exist:
-   - `outputs/<project-code>-PRD.md` — Target Users/Personas (candidate roles), Key Features/Capabilities Overview (candidate features/resources).
-   - `outputs/feature-<feature>/<feature>-feature-analysis.md` — Stakeholders/Roles Involved (candidate roles), Systems Involved (candidate resources), To-Be: Business Rules (possible access-relevant rules — flag hints of approval, role hierarchy, or segregation of duties as Open Questions rather than modeling them).
-   - `outputs/feature-<feature>/<feature>-use-cases.md` — Primary/Secondary Actors per use case (roles tied to specific actions), Basic Flow steps (source for inferring CRUD-level grants).
+   - `outputs/<project-code>-PRD.md` — Actors & End Users (candidate roles), Product Scope & Key Features (candidate features/resources).
+   - `outputs/features/<feature>/<feature>-feature-analysis.md` — Roles Involved (candidate roles), Systems Involved (candidate resources), Business Rules (possible access-relevant rules — flag hints of approval, role hierarchy, or segregation of duties as Open Questions rather than modeling them).
+   - `outputs/features/<feature>/<feature>-use-cases.md` — Primary/Secondary Actors per use case (roles tied to specific actions), Basic Flow steps (source for inferring CRUD-level grants).
 
 3. **Build the Roles Inventory and Features/Resources Inventory** directly from what's literally named in these sources. Do NOT merge roles that appear under different names or descriptions across documents, even if they look like the same role — list each as its own row and flag the suspected duplication under Open Questions instead.
 

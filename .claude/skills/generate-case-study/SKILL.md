@@ -80,7 +80,6 @@ Ask, section by section (skip any the user says doesn't apply yet, and flag the 
 ### 2.4 — Draft the document
 
 Follow `templates/case-study-template.md` exactly. Populate:
-- Document Control (Client, Project — only if this case study is scoped to one specific project rather than the client generally, Author, Created date, Confidentiality Level).
 - Confidentiality & Sharing Notes — just the client/company name and the industry/domain itself (real or anonymized per the Step 2.2 decision), with no extra labels like "Real name OK to use —" or "Shareable —" prefixed to the value; the sharing decision itself already lives in the Document Control "Confidentiality Level" field.
 - All remaining sections from interview + source docs + LLM research — written as plain narrative/tables with **no inline file-path citations or source links anywhere in the body** :
   - Industry & Business Context: blend user's description with raw project info and LLM market research (trends, market context, positioning), per the 2-3 sentence limit above.
@@ -88,9 +87,10 @@ Follow `templates/case-study-template.md` exactly. Populate:
   - Solution Delivered: open with a one-sentence italic *Scope note* that frames the single dimension that applies, then one `Feature / Capability | Description` table (one row per capability, one-sentence descriptions).
     - Role onboarding: the note says the solution was to onboard a dedicated <role> to own <areas> — and what it was *not* (e.g., not rebuilding the platform, which remained owned by another team). Rows are the capabilities the role brought to the client (e.g., incident management, local SME function, release planning).
     - Project delivery: the note states the BA's role and ownership over the capabilities listed (e.g., requirement engineering and validation, working with the PO/PM). Rows are the product features/capabilities delivered.
-    - No Impact/outcome column (that belongs in Section 7) and no file-path citations.
+    - No Impact/outcome column (that belongs in Key Achievements & Contributions) and no file-path citations.
   - My Role & Responsibilities: title, a 1-2 sentence scope statement, then a bulleted list of responsibility areas (each a short bolded phrase plus what it covered). No achievements or results here.
   - Key Achievements & Contributions: one table row per achievement — a short Dimension label (e.g., Delivery, Stakeholder Engagement, Quality, Process Improvement) and a single Achievement statement combining what the BA personally did with the result it produced. Keep the statement specific to the BA's own actions, not the wider team's.
+- Document Control, last (Client, Project — only if this case study is scoped to one specific project rather than the client generally, Created date, Confidentiality Level).
 
 ### 2.5 — Write output
 

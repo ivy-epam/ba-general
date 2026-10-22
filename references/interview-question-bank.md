@@ -14,7 +14,7 @@ Questions for every interview aspect except **candidate assessment focuses**, wh
 | AI use in daily work | [AI](#ai-use-in-daily-work) | Every interview |
 | Soft skills | [Soft skills](#soft-skills) | Every interview |
 
-**Type:** **Mandatory** questions are always selected when their section is used and count toward its allocation; **Mandatory (A3)** questions are Mandatory when the candidate's met seniority is A3 and Optional otherwise; **Optional** questions are selected per candidate, with a rationale. **Competency** names match `references/seniority-competency-definition-business-analysis.md` where one applies. **Strong answer includes:** points the interviewer listens for — not read out to the candidate. Where questions in different sections share a theme, **Perspective** marks the angle a strong answer takes in that section.
+**Type:** **Mandatory** questions are always selected when their section is used and count toward its allocation; **Mandatory (A3)** questions are Mandatory when the candidate's met seniority is A3 and Optional otherwise; **Optional** questions are selected per candidate, with a rationale. **Competency** names match `references/ba-seniority.md` where one applies. **Strong answer includes:** points the interviewer listens for — not read out to the candidate. Where questions in different sections share a theme, **Perspective** marks the angle a strong answer takes in that section.
 
 **When editing the bank:** a section's Mandatory count, including Mandatory (A3) questions, must not exceed its smallest allocation in `assess-candidate` Step 6, and should stay below it so Optional picks can tailor the interview.
 

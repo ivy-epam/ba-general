@@ -1,8 +1,8 @@
 ---
 template: knowledge-page
 title: Feature Knowledge Page Template
-version: 1.0
-last_updated: 2026-09-28
+version: 1.1
+last_updated: 2026-10-22
 owner: ivy_li@epam.com
 used_by_skill: generate-knowledge-page
 ---
@@ -53,7 +53,6 @@ used_by_skill: generate-knowledge-page
 
 | Field | Value |
 |---|---|
-| Feature | {{feature name}} |
 | Status | Draft / In Review / Approved |
 
 **Revision History**
